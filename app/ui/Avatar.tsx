@@ -1,15 +1,14 @@
 import Image from 'next/image'
 import React from 'react'
 
-export default function Avatar({publisher}:any) {
+export default function Avatar({ publisher }: any) {
   return (
-    <div className='flex gap-4'>
+    <div className='flex items-center gap-4'>
       <Image
-        className='h-full'
+        className=''
         src={publisher.avatar}
         alt={publisher.name}
         width={50}
-        
       />
       <div>
         <p className='font-bold'>{publisher.name}</p>
