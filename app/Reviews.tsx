@@ -8,7 +8,7 @@ import Statement from './ui/Statement'
 export default function Reviews() {
   return (
     <Container bgColor='bg-background-main'>
-      <div className='flex justify-between items-end'>
+      <div className='flex justify-between items-start md:items-end'>
         <h2>
           We love our Customers <br /> and They love us too
         </h2>

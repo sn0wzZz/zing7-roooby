@@ -27,7 +27,9 @@ export default function News() {
             <h4 className='h-full'>{article.title}</h4>
             <p>
               {formatDate(article.date)}
-              <span className='text-base text-p-el'>, by {article.publisher}</span>
+              <span className='text-base text-p-el'>
+                , by {article.publisher}
+              </span>
             </p>
           </div>
         ))}
