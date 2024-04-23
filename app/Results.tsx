@@ -14,7 +14,7 @@ export default function Results() {
           See how companies like yours have smashed their sales success goals
         </p>
       </div>
-      <div className='flex flex-col md:flex-row lg:flex-col gap-5'>
+      <div className='flex flex-col md:flex-row lg:flex-col gap-5 md:gap-10'>
         {resultsData.map(({ statement, growth, publisher }, i) => (
           <div
             key={i}

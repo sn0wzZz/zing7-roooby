@@ -17,13 +17,12 @@ export default function Reviews() {
       <div>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
           {reviewsData.map((review, i) => (
-            <div key={i} className='relative pt-16 flex flex-col gap-5'>
+            <div key={i} className='relative pt-16 flex flex-col gap-5 '>
               <p className='text-f-banner-3 text-9xl absolute top-0'>“</p>
               <div className='border-t border-p-el'></div>
               <Statement>{review.statement}</Statement>
               <div className='mt-5'>
-
-              <Avatar publisher={review.publisher} />
+                <Avatar publisher={review.publisher} />
               </div>
             </div>
           ))}
