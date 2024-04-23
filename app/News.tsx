@@ -8,7 +8,7 @@ import { formatDate } from './utils/helpers'
 export default function News() {
   return (
     <Container>
-      <div className='flex justify-between '>
+      <div className='flex justify-between  items-start'>
         <h1>What’s new at Roooby?</h1>
         <ButtonMore />
       </div>
