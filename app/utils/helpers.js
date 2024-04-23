@@ -20,3 +20,8 @@ export function formatDate(dateString) {
   return `${day<10 ? '0'+day : day} ${month} ${year}`
 }
 
+export function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  return emailRegex.test(email)
+}
+

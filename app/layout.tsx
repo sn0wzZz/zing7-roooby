@@ -4,6 +4,7 @@ import './globals.css'
 import MainNav from './ui/MainNav'
 import Footer from './ui/Footer'
 import BottmBanner from './ui/BottmBanner'
+import { Toaster } from 'react-hot-toast'
 
 export const metadata: Metadata = {
   title: 'Roooby',
@@ -22,6 +23,7 @@ export default function RootLayout({
           {children}
         <BottmBanner />
         <Footer />
+        <Toaster />
       </body>
     </html>
   )

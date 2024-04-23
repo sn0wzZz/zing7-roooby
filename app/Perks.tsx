@@ -12,7 +12,7 @@ export default function Perks() {
         <div
           key={i}
           className={`col-span-12 lg:col-span-10 lg:col-start-2  flex flex-col 
-        border-t-2   border-p-el p-2  md:p-5 md:m-5 gap-10 xl:gap-28 lg:p-10 lg:m-10   items-center justify-between
+        border-t-2   border-p-el py-5  md:p-5 md:m-5 gap-10 xl:gap-28 lg:p-10 lg:m-10   items-center justify-between
         
         ${(i + 1) % 2 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}
         >

@@ -20,7 +20,7 @@ export default function BottmBanner() {
           </p>
         </div>
         <div className='flex flex-col justify-center items-center gap-5  mx-10 lg:translate-x-20  xl:translate-x-48 2xl:translate-x-80'>
-          <button className='button-secondary flex items-center text-xl p-6 '>
+          <button className='button-secondary flex items-center text-base sm:text-lg md:text-xl p-4 md:p-6 '>
             Try for Free
             <BsChevronRight />
           </button>

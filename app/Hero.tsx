@@ -1,12 +1,34 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Product from '@/public/product.svg'
 import Image from 'next/image'
 import { FiMail } from 'react-icons/fi'
 import { partnersData } from '@/public/data'
+import toast from 'react-hot-toast'
+import { isValidEmail } from './utils/helpers'
 
 export default function Hero() {
-  const notify = () => {}
+  const [input, setInput] = useState('')
+  const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    setError(null)
+  }, [input])
+
+  const notify = () => {
+    try {
+      if (isValidEmail(input)) {
+        toast.success('Check your email!', {
+          duration: 2000,
+        })
+      } else {
+        throw new Error("Make sure you've entered a valid email!")
+      }
+    } catch (err: any) {
+      setError(err.message)
+    }
+  }
+
   return (
     <div className='grid grid-cols-12 bg-background-main '>
       <div className='flex flex-col  col-span-12  xl:col-span-12 xl:col-start-2 p-5 md:p-10'>
@@ -27,8 +49,13 @@ export default function Hero() {
               </p>
             </div>
             <div className=' mt-10 lg:mt-20 2xl:mt-32 mb-2 flex  flex-nowrap'>
-              <div className='flex items-center bg-white rounded-xl p-1'>
+              <div
+                className={`flex items-center bg-white rounded-xl p-1 ${
+                  error && 'border-2 border-red-500'
+                }`}
+              >
                 <input
+                  onChange={(e) => setInput(e.target.value)}
                   className=' p-3 w-[12rem] xl:w-auto xl:p-4 xl:text-xl outline-none  border-none bg bg-transparent'
                   type='text'
                   placeholder='Enter your email'
@@ -38,9 +65,13 @@ export default function Hero() {
                 </button>
               </div>
             </div>
-            <span className='font-base text-p-secondary mt-3 '>
-              Full access. No credit card required.
-            </span>
+            {error ? (
+              <span className='text-red-500'>{error}</span>
+            ) : (
+              <span className='font-base text-p-secondary mt-3 '>
+                Full access. No credit card required.
+              </span>
+            )}
           </div>
           {/* Right side */}
 
@@ -54,7 +85,9 @@ export default function Hero() {
         </div>
 
         <div className='flex flex-col lg:flex-row  gap-5 lg:gap-20 my-4 lg:my-20 items-center'>
-          <p className='font-bold w-full lg:w-auto text-p-secondary'>Trusted by 1,000+ customers</p>
+          <p className='font-bold w-full lg:w-auto text-p-secondary'>
+            Trusted by 1,000+ customers
+          </p>
           <div className='grid  grid-cols-3  sm:grid-cols-4 md:grid-cols-5 xl:grid-cols-5 gap-5 md:gap-16  xl:gap-20 justify-center'>
             {partnersData.map((partner, i) => (
               <div key={i} className='flex justify-center '>

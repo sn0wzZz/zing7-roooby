@@ -27,7 +27,7 @@ export default function Integrations() {
         </div>
 
         <div>
-          <button className='flex items-center text-2xl p-4 hover:bg-white rounded-xl'>
+          <button className='flex items-center text-lg sm:text-xl  md:text-2xl p-4 hover:bg-white rounded-xl'>
             See all apps and extensions
             <FaChevronRight />
           </button>
