@@ -18,7 +18,7 @@ export default function News() {
             <p className=' text-p-el w-max font-bold text-lg'>
               {article.tag.toUpperCase()}
             </p>
-            <div className='border-t-2 border-p-el'></div>
+            <div className='border-t border-p-el'></div>
             <Image
               className='w-full h-full'
               src={article.image}
