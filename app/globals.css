@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,18 +18,61 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base {
+  * {
+    @apply font-Inter;
+  }
+
+  h1 {
+    @apply font-bold  text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
+  }
+  h2 {
+    @apply font-bold text-3xl xl:text-5xl;
+  }
+  h3 {
+    @apply font-bold text-lg sm:text-xl md:text-lg lg:text-xl xl:text-2xl;
+  }
+  h4 {
+    @apply font-bold text-xl  md:text-2xl lg:text-3xl ;
+  }
+  h5 {
+    @apply font-bold text-lg md:text-xl;
+  }
+  h6 {
+    @apply font-bold text-sm;
+  }
+  p {
+    @apply lg:text-xl text-base ;
+  }
+
+  a {
+    @apply hover:underline hover:cursor-pointer;
+  }
+
+  button {
+    @apply transition-all duration-200 ease-linear;
+  }
+
+  .link{
+    @apply text-2xl m-3 py-2  border-black hover:no-underline  hover:border-b-2 active:border-b-2 lg:text-lg;
+  }
+  .link-active{
+    @apply border-black border-b-2 
+  }
+
+  .button-primary {
+    @apply px-4 py-2 rounded-lg text-nowrap w-max font-bold text-white bg-primary hover:bg-secondary hover:text-black;
+  }
+  .button-secondary {
+    @apply px-4 py-2 rounded-lg text-nowrap w-max font-bold bg-white hover:bg-purple-200;
+  }
+  .button-social{
+    @apply rounded-full text-white p-2 flex justify-center items-center
   }
 }

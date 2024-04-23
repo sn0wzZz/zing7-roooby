@@ -1,0 +1,69 @@
+'use client'
+import React from 'react'
+import Product from '@/public/product.svg'
+import Image from 'next/image'
+import { FiMail } from 'react-icons/fi'
+import { partnersData } from '@/public/data'
+
+export default function Hero() {
+  const notify = () => {}
+  return (
+    <div className='grid grid-cols-12 bg-background-main '>
+      <div className='flex flex-col  col-span-12  xl:col-span-12 xl:col-start-2 p-5 md:p-10'>
+        <div className='flex flex-col md:flex-row w-full'>
+          {/* Left side */}
+          <div>
+            <div className='flex flex-col gap-5'>
+              <h1 className='text-primary'>
+                Bringing companies <br /> and customers <br /> together,
+                anywhere
+              </h1>
+              <p className='text-p-secondary'>
+                An awesome & powefull tools for your business, increase business{' '}
+                <br />
+                revenue with enterprise-grade links built to acquire and engage{' '}
+                <br />
+                cutomers. <br />
+              </p>
+            </div>
+            <div className=' mt-10 lg:mt-20 2xl:mt-32 mb-2 flex  flex-nowrap'>
+              <div className='flex items-center bg-white rounded-xl p-1'>
+                <input
+                  className=' p-3 w-[12rem] xl:w-auto xl:p-4 xl:text-xl outline-none  border-none bg bg-transparent'
+                  type='text'
+                  placeholder='Enter your email'
+                />
+                <button onClick={notify} className=' button-primary  h-full'>
+                  Try for free
+                </button>
+              </div>
+            </div>
+            <span className='font-base text-p-secondary mt-3 '>
+              Full access. No credit card required.
+            </span>
+          </div>
+          {/* Right side */}
+
+          <div className='relative w-full md:w-[50vw] h-[300px] md:h-[500px] lg:h-[500px] '>
+            <Image
+              src={Product}
+              alt='banner'
+              className='absolute top-0 -right-[25vw] md:-right-[15vw] lg:-right-[10vw] xl:-right-[10vw] 2xl:-right-[25vw]  h-full w-full '
+            />
+          </div>
+        </div>
+
+        <div className='flex flex-col lg:flex-row  gap-5 lg:gap-20 my-4 lg:my-20 items-center'>
+          <p className='font-bold w-full lg:w-auto text-p-secondary'>Trusted by 1,000+ customers</p>
+          <div className='grid  grid-cols-3  sm:grid-cols-4 md:grid-cols-5 xl:grid-cols-5 gap-5 md:gap-16  xl:gap-20 justify-center'>
+            {partnersData.map((partner, i) => (
+              <div key={i} className='flex justify-center '>
+                <Image src={partner} alt='logo' />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
