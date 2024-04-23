@@ -77,8 +77,8 @@ export default function MainNav() {
           {navLinks.map((link, i) => (
             <li key={i}>
               <Link
-                onClick={()=>handleLinkClick(link)}
-                className={`link ${active===link ? 'link-active' : ''}`}
+                onClick={() => handleLinkClick(link)}
+                className={`link ${active === link ? 'link-active' : ''}`}
                 href={`/${link !== 'product' ? link : ''}`}
               >
                 {capitalizeFirstLetter(link)}
@@ -89,7 +89,9 @@ export default function MainNav() {
 
         <div className='mt-10 flex flex-col gap-2 lg:flex-row lg:mt-0 '>
           <button className='button-secondary w-full md:w-auto'>Log in</button>
-          <button className='button-primary'>Try for Free</button>
+          <button className='button-primary w-full md:w-auto'>
+            Try for Free
+          </button>
         </div>
       </div>
     </nav>

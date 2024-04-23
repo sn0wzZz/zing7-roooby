@@ -67,12 +67,12 @@
   }
 
   .button-primary {
-    @apply px-4 py-2 rounded-lg text-nowrap w-max font-bold text-white bg-primary hover:bg-secondary hover:text-black;
+    @apply px-4 py-2 rounded-lg text-nowrap w-max h-max font-bold text-white bg-primary hover:bg-secondary hover:text-black;
   }
   .button-secondary {
-    @apply px-4 py-2 rounded-lg text-nowrap w-max font-bold bg-white hover:bg-purple-200;
+    @apply px-4 py-2 rounded-lg text-nowrap w-max h-max font-bold bg-white hover:bg-purple-200;
   }
   .button-social{
-    @apply rounded-full text-white p-2 flex justify-center items-center
+    @apply rounded-full text-white p-2 flex justify-center items-center active:opacity-80
   }
 }

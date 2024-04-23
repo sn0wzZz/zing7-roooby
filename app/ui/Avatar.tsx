@@ -5,11 +5,11 @@ export default function Avatar({publisher}:any) {
   return (
     <div className='flex gap-4'>
       <Image
-        className='w-max h-max'
+        className='h-full'
         src={publisher.avatar}
         alt={publisher.name}
-        width={700}
-        height={700}
+        width={50}
+        
       />
       <div>
         <p className='font-bold'>{publisher.name}</p>

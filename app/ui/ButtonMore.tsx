@@ -5,9 +5,11 @@ export default function ButtonMore({ children, onClick, variant2 }: any) {
   return (
     <button
       onClick={onClick}
-      className={`flex items-center text-xl text-black ${variant2? 'hover:bg-white':'hover:bg-background-main'} p-5 rounded-lg w-max  text-nowrap flex-nowrap`}
+      className={`flex items-center text-xl text-black ${
+        variant2 ? 'hover:bg-white' : 'hover:bg-background-main'
+      } p-5 rounded-lg max-w-max overflow-hidden whitespace-nowrap`}
     >
-      {children || 'See all'}
+      <span className='mr-2'>{children || 'See all'}</span>
       <FaChevronRight className='text-f-banner-3' />
     </button>
   )
