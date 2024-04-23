@@ -18,7 +18,7 @@ export default function Results() {
         {resultsData.map(({ statement, growth, publisher }, i) => (
           <div
             key={i}
-            className='flex flex-col lg:flex-row border-t-2 gap-10 border-p-el py-10 lg:py-20'
+            className='flex flex-col lg:flex-row border-t gap-10 border-p-el py-10 lg:py-20'
           >
             <div className=' text-nowrap lg:w-1/3'>
               <p className='font-bold text-8xl'>{growth.value}</p>

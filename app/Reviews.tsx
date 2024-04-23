@@ -19,7 +19,7 @@ export default function Reviews() {
           {reviewsData.map((review, i) => (
             <div key={i} className='relative pt-16 flex flex-col gap-5'>
               <p className='text-f-banner-3 text-9xl absolute top-0'>“</p>
-              <div className='border-t-2 border-p-el'></div>
+              <div className='border-t border-p-el'></div>
               <Statement>{review.statement}</Statement>
               <div className='mt-5'>
 

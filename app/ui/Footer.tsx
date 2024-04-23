@@ -85,7 +85,7 @@ export default function Footer() {
           </div>
         ))}
       </div>
-      <div className=' border-t-2 p-2 flex flex-col-reverse items-center md:flex-row md: justify-between col-span-12 xl:col-span-10 xl:col-start-2 text-p-secondary gap-3'>
+      <div className=' border-t p-2 flex flex-col-reverse items-center md:flex-row md: justify-between col-span-12 xl:col-span-10 xl:col-start-2 text-p-secondary gap-3'>
         <span>© Cospanyright 2024</span>
         <div className='flex gap-3'>
           <a href='#'>Terms of service</a>
