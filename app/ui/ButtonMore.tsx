@@ -6,7 +6,7 @@ export default function ButtonMore({ children, onClick, variant2 }: any) {
       onClick={onClick}
       className={`flex items-center text-xl text-black ${
         variant2 ? 'hover:bg-white' : 'hover:bg-background-main'
-      } p-5 rounded-lg max-w-max`}
+      } p-2 md:p-5 rounded-lg max-w-max`}
     >
       <div className='flex items-center'>
         <span className='mr-2 whitespace-nowrap'>{children || 'See all'}</span>
