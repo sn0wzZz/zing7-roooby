@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaChevronRight } from 'react-icons/fa6'
 
 export default function ButtonMore({ children, onClick, variant2 }: any) {
@@ -7,10 +6,13 @@ export default function ButtonMore({ children, onClick, variant2 }: any) {
       onClick={onClick}
       className={`flex items-center text-xl text-black ${
         variant2 ? 'hover:bg-white' : 'hover:bg-background-main'
-      } p-5 rounded-lg max-w-max overflow-hidden whitespace-nowrap`}
+      } p-5 rounded-lg max-w-max`}
     >
-      <span className='mr-2'>{children || 'See all'}</span>
-      <FaChevronRight className='text-f-banner-3' />
+      <div className='flex items-center'>
+        <span className='mr-2 whitespace-nowrap'>{children || 'See all'}</span>
+        <FaChevronRight className='text-f-banner-3' />
+      </div>
     </button>
   )
 }
+
