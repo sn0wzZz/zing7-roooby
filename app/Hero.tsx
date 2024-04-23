@@ -48,10 +48,10 @@ export default function Hero() {
                 cutomers. <br />
               </p>
             </div>
-            <div className=' mt-10 lg:mt-20 2xl:mt-32 mb-2 flex  flex-nowrap'>
+            <div className=' mt-5 md:mt-10 lg:mt-20 2xl:mt-32 mb-2 flex  flex-nowrap'>
               <div
-                className={`flex items-center bg-white rounded-xl p-1 ${
-                  error && 'border-2 border-red-500'
+                className={`flex items-center bg-white rounded-xl p-1 border ${
+                  error ? ' border-red-500' : ' border-white'
                 }`}
               >
                 <input

@@ -60,7 +60,7 @@
   }
 
   .link{
-    @apply text-2xl m-3 py-2  border-black hover:no-underline  hover:border-b-2 active:border-b-2 lg:text-lg;
+    @apply text-xl m-3 py-2  border-black hover:no-underline  hover:border-b-2 active:border-b-2 lg:text-lg;
   }
   .link-active{
     @apply border-black border-b-2 
