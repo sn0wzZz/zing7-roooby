@@ -5,7 +5,7 @@ export default function Avatar({ publisher }: any) {
   return (
     <div className='flex items-center gap-4'>
       <Image
-        className=''
+        className='rounded-full'
         src={publisher.avatar}
         alt={publisher.name}
         width={50}
