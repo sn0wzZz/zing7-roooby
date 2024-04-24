@@ -1,8 +1,10 @@
 import React from 'react'
 import { BsChevronRight } from 'react-icons/bs'
+import Container from './Container'
 
 export default function BottmBanner() {
   return (
+      
     <div className='h-[500px] bg-f-banner-1 col-span-12 relative overflow-hidden z-0'>
       <div className='absolute w-[200vw] h-[20vh] md:w-[45vw] md:h-[45vw] bg-f-banner-2  -right-36 bottom-0 md:top-0'></div>
       <div className='absolute w-[70vh] h-[70vh] sm:w-[90vh] sm:h-[90vh] md:w-[50vw] md:h-[50vw] bg-f-banner-3 rounded-full -right-32 top-72  md:top-24   '></div>

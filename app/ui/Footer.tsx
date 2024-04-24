@@ -46,9 +46,9 @@ const company = [
 
 export default function Footer() {
   return (
-    <footer className='p-10 grid grid-cols-1 xl:grid-cols-12 col-span-12'>
-      <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 grid-rows-auto gap-5 mb-5 md:mb-10 lg:mb-32 col-span-12 xl:col-span-10 xl:col-start-2'>
-        <div className='flex flex-col gap-5 col-span-2 row-start-3 lg:row-start-1'>
+    <footer className='grid grid-cols-1 col-span-12 p-10 xl:grid-cols-12'>
+      <div className='container grid grid-cols-2 col-span-12 gap-5 mx-auto mb-5 md:grid-cols-4 lg:grid-cols-6 grid-rows-auto md:mb-10 lg:mb-32 xl:col-span-10 xl:col-start-2'>
+        <div className='flex flex-col col-span-2 row-start-3 gap-5 lg:row-start-1'>
           <Image src={Logo} alt='logo' />
           <p>
             We built an elegant solution.
@@ -71,7 +71,7 @@ export default function Footer() {
         </div>
 
         {company.map((tab, i) => (
-          <div key={i} className=' flex flex-col gap-5'>
+          <div key={i} className='flex flex-col gap-5 '>
             <span className='text-base font-extrabold'>
               {capitalizeFirstLetter(tab.name)}
             </span>
@@ -85,7 +85,7 @@ export default function Footer() {
           </div>
         ))}
       </div>
-      <div className=' border-t p-2 flex flex-col-reverse items-center md:flex-row md: justify-between col-span-12 xl:col-span-10 xl:col-start-2 text-p-secondary gap-3'>
+      <div className='flex flex-col-reverse items-center justify-between col-span-12 gap-3 p-2 border-t md:flex-row md: xl:col-span-10 xl:col-start-2 text-p-secondary'>
         <span>© Cospanyright 2024</span>
         <div className='flex gap-3'>
           <a href='#'>Terms of service</a>

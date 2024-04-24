@@ -2,7 +2,7 @@ import { perksData } from '@/public/data'
 import Image from 'next/image'
 import React from 'react'
 import { FaCheck } from 'react-icons/fa6'
-import Container from './ui/Container'
+import Container from '../ui/Container'
 
 export default function Perks() {
   return (
@@ -17,8 +17,8 @@ export default function Perks() {
         ${(i + 1) % 2 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}
         >
           <div className='flex flex-col  gap-4 md:gap-8  lg:w-[50vw]'>
-            <div className='flex flex-col  gap-3 '>
-              <h6 className='p-2 bg-secondary rounded-lg w-max'>
+            <div className='flex flex-col gap-3 '>
+              <h6 className='p-2 rounded-lg bg-secondary w-max'>
                 {perk.tag.toUpperCase()}
               </h6>
               <h2>{perk.title}</h2>

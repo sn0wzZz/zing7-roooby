@@ -2,7 +2,8 @@
 import { benefitsData } from '@/public/data'
 import Image from 'next/image'
 import React, { useState } from 'react'
-import Container from './ui/Container'
+import Container from '../ui/Container'
+
 
 export default function Benefits() {
   const [isHovering, setIsHovering] = useState<number | null>(null)

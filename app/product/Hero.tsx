@@ -2,10 +2,11 @@
 import React, { useEffect, useState } from 'react'
 import Product from '@/public/product.svg'
 import Image from 'next/image'
-import { FiMail } from 'react-icons/fi'
+
 import { partnersData } from '@/public/data'
 import toast from 'react-hot-toast'
-import { isValidEmail } from './utils/helpers'
+import { isValidEmail } from '../utils/helpers'
+
 
 export default function Hero() {
   const [input, setInput] = useState('')
@@ -30,9 +31,9 @@ export default function Hero() {
   }
 
   return (
-    <div className='grid grid-cols-12 bg-background-main '>
-      <div className='flex flex-col  col-span-12  xl:col-span-12 xl:col-start-2 p-5 md:p-10'>
-        <div className='flex flex-col md:flex-row w-full'>
+    <div className='grid grid-cols-12 mx-auto bg-background-main'>
+      <div className='container flex-col col-span-12 p-5 mx-auto lex m xl:col-span-12 md:p-10'>
+        <div className='flex flex-col w-full md:flex-row'>
           {/* Left side */}
           <div>
             <div className='flex flex-col gap-5'>
@@ -48,7 +49,7 @@ export default function Hero() {
                 cutomers. <br />
               </p>
             </div>
-            <div className=' mt-5 md:mt-10 lg:mt-20 2xl:mt-32 mb-2 flex  flex-nowrap'>
+            <div className='flex mt-5 mb-2 md:mt-10 lg:mt-20 2xl:mt-32 flex-nowrap'>
               <div
                 className={`flex items-center bg-white rounded-xl p-1 border ${
                   error ? ' border-red-500' : ' border-white'
@@ -60,7 +61,7 @@ export default function Hero() {
                   type='text'
                   placeholder='Enter your email'
                 />
-                <button onClick={notify} className=' button-primary  h-full'>
+                <button onClick={notify} className='h-full button-primary'>
                   Try for free
                 </button>
               </div>
@@ -68,7 +69,7 @@ export default function Hero() {
             {error ? (
               <span className='text-red-500'>{error}</span>
             ) : (
-              <span className='font-base text-p-secondary mt-3 '>
+              <span className='mt-3 font-base text-p-secondary '>
                 Full access. No credit card required.
               </span>
             )}
@@ -84,11 +85,11 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className='flex flex-col lg:flex-row  gap-5 lg:gap-20 my-4 lg:my-20 items-center'>
-          <p className='font-bold w-full lg:w-auto text-p-secondary'>
+        <div className='flex flex-col items-center gap-5 my-4 lg:flex-row lg:gap-20 lg:my-20'>
+          <p className='w-full font-bold lg:w-auto text-p-secondary'>
             Trusted by 1,000+ customers
           </p>
-          <div className='grid  grid-cols-3  sm:grid-cols-4 md:grid-cols-5 xl:grid-cols-5 gap-5 md:gap-16  xl:gap-20 justify-center'>
+          <div className='grid justify-center grid-cols-3 gap-5 sm:grid-cols-4 md:grid-cols-5 xl:grid-cols-5 md:gap-16 xl:gap-20'>
             {partnersData.map((partner, i) => (
               <div key={i} className='flex justify-center '>
                 <Image src={partner} alt='logo' />
