@@ -23,9 +23,9 @@ export default function MainNav() {
   }
 
   const handleLinkClick = (link: any) => {
+    handleMenu()
     if (link === 'product') return setActive('/')
     setActive(link)
-    handleMenu()
   }
 
   return (
