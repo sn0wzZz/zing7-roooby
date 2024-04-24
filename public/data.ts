@@ -217,3 +217,102 @@ export const reviewsData = [
     },
   },
 ]
+
+export const plansData = [
+  {
+    name: 'Starter',
+    tag: '',
+    description: 'Get organized and set up simple sales processes lorem ipsum',
+    price: { value: 8.9, type: 'month' },
+
+    offer: 'Free 14-day trial. No credit card required.',
+    features: {
+      included: [
+        '2 team members',
+        '1,000 Contacts & Companies',
+        '5 Campaign Workflows',
+        '10 Nodes Per Campaign',
+        '5 Automation Rules (Triggers)',
+        '3 Plugins/Integrations',
+      ],
+      excluded: [
+        'Marketing Automation',
+        'Custom Deal Tracks',
+        'Automated Voicemails',
+        'Post-call Automation',
+      ],
+    },
+  },
+  {
+    name: 'Professional',
+    tag: 'recommended',
+    description:
+      'Everything you need to boost performance and revenue lorem ipsum',
+    price: { value: 29.9, type: 'month' },
+    offer: 'Free 14-day trial. No credit card required.',
+    features: {
+      included: [
+        '10 team members',
+        '2,500 Contacts & Companies',
+        '5 Campaign Workflows',
+        '10 Nodes Per Campaign',
+        '5 Automation Rules (Triggers)',
+        '3 Plugins/Integrations',
+        'Marketing Automation',
+        'Custom Deal Tracks',
+      ],
+      excluded: ['Automated Voicemails', 'Post-call Automation'],
+    },
+  },
+  {
+    name: 'Enterprise',
+    tag: '',
+    description:
+      'Customize without limits and access unrivaled support lorem ipsum',
+    price: { value: 39.9, type: 'month' },
+    offer: 'Free 14-day trial. No credit card required.',
+    features: {
+      included: [
+        '10 team members',
+        '2,500 Contacts & Companies',
+        '5 Campaign Workflows',
+        '10 Nodes Per Campaign',
+        '5 Automation Rules (Triggers)',
+        '3 Plugins/Integrations',
+        'Marketing Automation',
+        'Custom Deal Tracks',
+        'Automated Voicemails',
+        'Post-call Automation',
+      ],
+      excluded: [],
+    },
+  },
+]
+
+export const faqData = [
+  {
+    question: 'How Does Roooby CRM Compare To The Competition?',
+    answer:
+      'Rooby CRM offers the most affordable, comprehensive platform to manage the entire customer journey, from generating leads, to closing deals and supporting your customers. With a full suite of CRM, sales enablement, marketing automation, and help desk/customer support capabilities, it’s all you need to manage the entire customer lifecycle. Most of our competitors offer one or two of these functions as separate products, leaving you with the headache of integrating them and increasing the overall price point.',
+  },
+  {
+    question: 'Can I Change Plans Or Cancel My Subscription At Any Time?',
+    answer:
+      'Rooby CRM offers the most affordable, comprehensive platform to manage the entire customer journey, from generating leads, to closing deals and supporting your customers. With a full suite of CRM, sales enablement, marketing automation, and help desk/customer support capabilities, it’s all you need to manage the entire customer lifecycle. Most of our competitors offer one or two of these functions as separate products, leaving you with the headache of integrating them and increasing the overall price point.',
+  },
+  {
+    question: 'How Secure Is My Data With Roooby CRM?',
+    answer:
+      'Rooby CRM offers the most affordable, comprehensive platform to manage the entire customer journey, from generating leads, to closing deals and supporting your customers. With a full suite of CRM, sales enablement, marketing automation, and help desk/customer support capabilities, it’s all you need to manage the entire customer lifecycle. Most of our competitors offer one or two of these functions as separate products, leaving you with the headache of integrating them and increasing the overall price point.',
+  },
+  {
+    question: 'What Is The Uptime Guarantee?',
+    answer:
+      'Rooby CRM offers the most affordable, comprehensive platform to manage the entire customer journey, from generating leads, to closing deals and supporting your customers. With a full suite of CRM, sales enablement, marketing automation, and help desk/customer support capabilities, it’s all you need to manage the entire customer lifecycle. Most of our competitors offer one or two of these functions as separate products, leaving you with the headache of integrating them and increasing the overall price point.',
+  },
+  {
+    question: 'How Can I Add More Emails To My Account?',
+    answer:
+      'Rooby CRM offers the most affordable, comprehensive platform to manage the entire customer journey, from generating leads, to closing deals and supporting your customers. With a full suite of CRM, sales enablement, marketing automation, and help desk/customer support capabilities, it’s all you need to manage the entire customer lifecycle. Most of our competitors offer one or two of these functions as separate products, leaving you with the headache of integrating them and increasing the overall price point.',
+  },
+]

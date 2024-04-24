@@ -39,7 +39,7 @@
     @apply font-bold text-lg sm:text-xl md:text-lg lg:text-xl xl:text-2xl;
   }
   h4 {
-    @apply font-bold text-xl  md:text-2xl lg:text-3xl ;
+    @apply font-bold text-xl  md:text-2xl lg:text-2xl ;
   }
   h5 {
     @apply font-bold text-lg md:text-xl;
@@ -68,6 +68,9 @@
 
   .button-primary {
     @apply px-4 py-2 rounded-lg text-nowrap w-max h-max font-bold text-white bg-primary hover:bg-secondary hover:text-black;
+  }
+  .button-price {
+    @apply px-4 py-2 w-full rounded-lg text-nowrap lg:text-xl lg:py-4  font-bold text-black border border-p-el bg-white hover:bg-primary hover:text-white hover:border-primary;
   }
   .button-secondary {
     @apply px-4 py-2 rounded-lg text-nowrap w-max h-max font-bold bg-white hover:bg-purple-200;
