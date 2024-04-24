@@ -38,7 +38,7 @@ export default function Hero() {
           <div>
             <div className='flex flex-col gap-5'>
               <h1 className='text-primary'>
-                Bringing companies <br /> and customers <br /> together,
+                Bringing companies and customers together,
                 anywhere
               </h1>
               <p className='text-p-secondary'>
