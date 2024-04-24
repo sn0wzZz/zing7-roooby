@@ -37,9 +37,8 @@ export default function MainNav() {
         <Image src={Logo} alt='logo' />
       </div>
 
-      <button onClick={handleMenu} className='z-40 lg:hidden'>
-        <div>
-          <button className='relative group'>
+      <button onClick={handleMenu} className='relative z-40 lg:hidden group'>
+
             <div className='relative flex overflow-hidden items-center justify-center  w-[52px] h-[52px] transform transition-all  duration-200'>
               <div className='flex flex-col justify-between w-[21px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden'>
                 <div
@@ -58,8 +57,6 @@ export default function MainNav() {
                   }`}
                 ></div>
               </div>
-            </div>
-          </button>
         </div>
       </button>
 
