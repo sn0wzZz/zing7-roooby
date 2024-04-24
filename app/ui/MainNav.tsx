@@ -30,7 +30,7 @@ export default function MainNav() {
   }
 
   return (
-    <nav className='sticky top-0 w-[100vw] z-20 bg-background-main'>
+    <nav className='sticky top-0 w-[100vw] z-40 bg-background-main'>
       <div
         className={`container mx-auto  w-full px-4 py-1 md:py-3 flex justify-between  items-center lg:justify-around col-span-12 `}
       >
