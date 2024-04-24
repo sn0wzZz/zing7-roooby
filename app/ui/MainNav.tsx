@@ -4,25 +4,33 @@ import Logo from '@/public/Roooby.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import { capitalizeFirstLetter } from '@/app/utils/helpers'
+import { usePathname } from 'next/navigation'
 
 const navLinks = ['product', 'pricing', 'company', 'resources', 'contact']
 
 export default function MainNav() {
+  const pathname = usePathname()
+  console.log(pathname)
   const [menuIsOpen, setMenuIsOpen] = useState(false)
-  const [active, setActive] = useState('product')
+  const [active, setActive] = useState(
+    pathname === '/' ? pathname : pathname.replace('/', '')
+  )
+
+  console.log('active', active)
 
   const handleMenu = () => {
-
     setMenuIsOpen((cur) => !cur)
   }
 
-  const handleLinkClick =(link:any)=>{
+  const handleLinkClick = (link: any) => {
+    if (link === 'product') return setActive('/')
     setActive(link)
+    handleMenu()
   }
 
   return (
     <nav
-      className={` sticky top-0 z-20 w-[100vw] px-4 py-3 flex justify-between bg-background-main items-center lg:justify-around col-span-12 lg:px-32`}
+      className={` sticky top-0 z-20 w-[100vw] px-4 py-1 md:py-3 flex justify-between bg-background-main items-center lg:justify-around col-span-12 lg:px-32`}
     >
       {/* Logo */}
       <div>
@@ -56,12 +64,12 @@ export default function MainNav() {
       </button>
 
       <div
-        className={`h-[100vh] w-[60vw] bg-background-main
+        className={`h-[100vh] w-[70vw] bg-background-main
         fixed top-0 right-0   duration-200 z-10 flex items-center justify-center  shadow-2xl flex-col
         ${
           menuIsOpen ? 'translate-x-0' : 'translate-x-full'
         } transition-all duration-200 ease-linear
-        lg:translate-x-0 lg:bg-transparent lg:shadow-none lg:h-auto lg:top-none lg:right-none lg:flex-row lg:items-center lg:relative lg:w-[72vw] lg:justify-between
+        lg:translate-x-0 lg:bg-transparent lg:shadow-none lg:h-auto lg:top-none lg:right-none lg:flex-row lg:items-center lg:relative lg:w-[72vw] lg:justify-between 
         `}
       >
         <ul className=' h-[50vh]  flex flex-col  justify-evenly lg:flex-row lg:items-center  lg:h-auto lg:justify-normal '>
@@ -69,7 +77,9 @@ export default function MainNav() {
             <li key={i}>
               <Link
                 onClick={() => handleLinkClick(link)}
-                className={`link ${active === link ? 'link-active' : ''}`}
+                className={`link ${active === link ? 'link-active' : ''} ${
+                  active === '/' && link === 'product' && 'link-active'
+                }`}
                 href={`/${link !== 'product' ? link : ''}`}
               >
                 {capitalizeFirstLetter(link)}
@@ -78,9 +88,9 @@ export default function MainNav() {
           ))}
         </ul>
 
-        <div className='mt-10 flex flex-col gap-2 lg:flex-row lg:mt-0 '>
-          <button className='button-secondary w-full md:w-auto'>Log in</button>
-          <button className='button-primary w-full md:w-auto'>
+        <div className='flex flex-col gap-2 mt-10 lg:flex-row lg:mt-0 '>
+          <button className='w-full button-secondary md:w-auto'>Log in</button>
+          <button className='w-full button-primary md:w-auto'>
             Try for Free
           </button>
         </div>

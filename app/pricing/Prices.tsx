@@ -9,7 +9,7 @@ export default function Prices() {
   return (
     <Container bgColor='bg-background-main'>
       <div>
-        <div className='flex flex-col xl:flex-row gap-5 justify-between xl:items-end'>
+        <div className='flex flex-col justify-between gap-5 xl:flex-row xl:items-end'>
           <h1>
             Choose the right plan
             <br /> <span className='text-p-el'>for your business</span>
@@ -20,23 +20,23 @@ export default function Prices() {
             pricing grid below. Switch between plans at any time.
           </p>
         </div>
-        <div className='grid sm:grid-cols-2 xl:grid-cols-3 gap-5  py-5 md:py-10 lg:py-32'>
+        <div className='grid gap-5 py-5 sm:grid-cols-2 xl:grid-cols-3 md:py-10 lg:py-32'>
           {plansData.map(
             ({ description, price, tag, features, name, offer }, i) => (
               <div
                 key={i}
-                className='p-5 xl:p-10 bg-white rounded-2xl flex flex-col gap-5 lg:gap-10'
+                className='flex flex-col gap-5 p-5 bg-white xl:p-10 rounded-2xl lg:gap-10'
               >
                 <h4 className='flex items-center font-bold'>
                   {name}{' '}
                   {tag && (
-                    <span className='text-base lg:text-xs p-1 ml-2 bg-green-200 text-green-500 rounded-md'>
+                    <span className='p-1 ml-2 text-base text-green-500 bg-green-200 rounded-md lg:text-xs'>
                       {tag.toUpperCase()}
                     </span>
                   )}
                 </h4>
                 <p className='h-full'>{description}</p>
-                <p className='text-6xl lg:text-6xl font-bold w-max text-nowrap'>
+                <p className='text-6xl font-bold lg:text-6xl w-max text-nowrap'>
                   {formatCurrency(price.value)}{' '}
                   <span className='text-3xl lg:text-3xl text-p-el'>
                     /{price.type}
@@ -44,7 +44,7 @@ export default function Prices() {
                 </p>
                 <div className='flex flex-col gap-5 text-center'>
                   <button className='button-price'>Try for Free</button>
-                  <p className='text-p-el text-sm'>{offer}</p>
+                  <p className='text-sm text-p-el'>{offer}</p>
                 </div>
                 <div className='border-t border-p-el'></div>
                 <div className='flex flex-col gap-5'>
@@ -60,11 +60,11 @@ export default function Prices() {
             )
           )}
         </div>
-        <div className='p-10 xl:p-20 flex flex-col xl:flex-row gap-10 justify-around items-center border-t border-p-el'>
+        <div className='flex flex-col items-center gap-10 p-5 border-t md:p-10 xl:p-20 lg:flex-row md:justify-around border-p-el'>
           <h2 className='text-3xl'>Need help choosing the right plan?</h2>
-          <div className='flex gap-5 flex-col sm:flex-row sm:gap-10'>
-            <button className='button-secondary text-lg'>Contact sales</button>
-            <button className='button-primary text-lg'>Compare plans</button>
+          <div className='flex gap-5 sm:gap-10'>
+            <button className='text-lg button-secondary'>Contact sales</button>
+            <button className='text-lg button-primary'>Compare plans</button>
           </div>
         </div>
       </div>

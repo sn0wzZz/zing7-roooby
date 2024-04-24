@@ -8,13 +8,11 @@ export default function Benefits() {
   const [isHovering, setIsHovering] = useState<number | null>(null)
   const handleHover = (i: number | null) => setIsHovering(i)
 
-  console.log(isHovering)
-
   return (
-    // <div className='bg-primary grid gridn lg:grid-cols-12 p-5 lg: py-20 '>
+    // <div className='grid p-5 py-20 bg-primary gridn lg:grid-cols-12 lg: '>
     //   <div className=' lg:flex-row lg:col-span-10 lg:col-start-2'>
     <Container bgColor='bg-primary'>
-      <div className='flex flex-col lg:flex-row justify-between lg:items-end gap-5 lg:gap-10 p-5 lg:mb-20  '>
+      <div className='flex flex-col justify-between gap-5 p-5 lg:flex-row lg:items-end lg:gap-10 lg:mb-20 '>
         <h2 className='text-white'>
           Here&apos;s how Roooby can benefit your business
         </h2>
@@ -24,7 +22,7 @@ export default function Benefits() {
           faster.
         </p>
       </div>
-      <div className='flex flex-col md:flex-row  gap-5'>
+      <div className='flex flex-col gap-5 md:flex-row'>
         {benefitsData.map((benefit, i) => (
           <div
             key={i}
