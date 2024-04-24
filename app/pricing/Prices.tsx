@@ -46,7 +46,7 @@ export default function Prices() {
                   <button className='button-price'>Try for Free</button>
                   <p className='text-p-el text-sm'>{offer}</p>
                 </div>
-                <div className='border border-p-el'></div>
+                <div className='border-t border-p-el'></div>
                 <div className='flex flex-col gap-5'>
                   {features.included.map((feature, i) => (
                     <Feature key={i} feature={feature} />
