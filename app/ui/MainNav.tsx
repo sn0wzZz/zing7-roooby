@@ -60,14 +60,13 @@ export default function MainNav() {
             </div>
           </div>
         </button>
-
         <div
           className={`h-[100vh] w-[70vw] bg-background-main
         fixed top-0 right-0   duration-200 z-10 flex items-center justify-center  shadow-2xl flex-col
         ${
           menuIsOpen ? 'translate-x-0' : 'translate-x-full'
         } transition-all duration-200 ease-linear
-        lg:translate-x-0 lg:bg-transparent lg:shadow-none lg:h-auto lg:top-none lg:right-none lg:flex-row lg:items-center lg:relative lg:w-[60vw]  lg:justify-between 
+        lg:translate-x-0 lg:bg-transparent lg:shadow-none lg:h-auto lg:top-none lg:right-none lg:flex-row lg:items-center lg:relative lg:w-[60vw]  lg:justify-between   
         `}
         >
           <ul className=' h-[50vh]  flex flex-col  justify-evenly lg:flex-row lg:items-center  lg:h-auto lg:justify-normal '>
