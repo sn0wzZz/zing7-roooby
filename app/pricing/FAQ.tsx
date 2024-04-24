@@ -38,7 +38,7 @@ export default function FAQ() {
                       strokeLinecap='round'
                       strokeLinejoin='round'
                       strokeWidth={2}
-                      d={active === i ? 'M4  12h16M4 ' : 'M6 18L18 6M6 6l12 12'}
+                      d={active === i ? 'M4 12h16M4' : 'M6 18L18 6M6 6l12 12'}
                     />
                   </svg>
                 </button>

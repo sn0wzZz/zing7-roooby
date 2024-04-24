@@ -19,7 +19,7 @@ export default function BottmBanner() {
             else. Our highly trained reps are standing by, ready to help.
           </p>
         </div>
-        <div className='flex flex-col items-center justify-center gap-5 mx-10 text-center lg:translate-x-16 xl:translate-x-48 2xl:translate-x-80'>
+        <div className='flex flex-col items-center justify-center gap-5 mx-10 text-center lg:translate-x-16 xl:translate-x-48 '>
           <button className='flex items-center p-4 text-base button-secondary sm:text-lg md:text-xl md:p-6 '>
             Try for Free
             <BsChevronRight />
