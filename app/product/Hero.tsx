@@ -80,7 +80,7 @@ export default function Hero() {
             <Image
               src={Product}
               alt='banner'
-              className='absolute top-0 -right-[25vw] md:-right-[15vw] lg:-right-[10vw] xl:-right-[10vw] 2xl:-right-[20vw]  h-full w-full '
+              className='absolute top-0 -right-[25vw] md:-right-[15vw] lg:-right-[10vw] xl:-right-[5vw]  h-full w-full '
             />
           </div>
         </div>
