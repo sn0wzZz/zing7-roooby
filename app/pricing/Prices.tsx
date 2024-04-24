@@ -36,7 +36,7 @@ export default function Prices() {
                   )}
                 </h4>
                 <p className='h-full'>{description}</p>
-                <p className='text-4xl font-bold lg:text-6xl '>
+                <p className='text-4xl font-bold lg:text-5xl '>
                   {formatCurrency(price.value)}{' '}
                   <span className='text-2xl lg:text-3xl text-p-el'>
                     /{price.type}

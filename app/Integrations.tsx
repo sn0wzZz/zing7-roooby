@@ -5,8 +5,8 @@ import { FaChevronRight } from 'react-icons/fa6'
 
 export default function Integrations() {
   return (
-    <div className='grid grid-cols-1 lg:grid-cols-12 bg-background-main p-10 lg:p-20 xl:p-32'>
-      <div className='col-span-12 lg:col-span-10 lg:col-start-2 flex flex-col justify-center items-center gap-10 lg:gap-20'>
+    <div className='grid grid-cols-1 p-10 lg:grid-cols-12 bg-background-main lg:p-20 xl:p-32'>
+      <div className='flex flex-col items-center justify-center col-span-12 gap-10 lg:col-span-10 lg:col-start-2 lg:gap-20'>
         <div className='flex flex-col items-center'>
           <h2>Over 300+ integrations</h2>
           <p>
@@ -14,7 +14,7 @@ export default function Integrations() {
             with hundreds of apps and integrations
           </p>
         </div>
-        <div className='grid grid-cols-2 grid-rows-auto sm:grid-cols-7 md:grid-cols-7 lg:grid-cols-7 xl:grid-cols-11  gap-2'>
+        <div className='grid grid-cols-2 gap-2 grid-rows-auto sm:grid-cols-7 md:grid-cols-7 lg:grid-cols-7 xl:grid-cols-11'>
           {integrationsData.map((integration, i) => (
             <div
               key={i}
@@ -27,7 +27,7 @@ export default function Integrations() {
         </div>
 
         <div>
-          <button className='flex items-center text-lg sm:text-xl  md:text-2xl p-4 hover:bg-white rounded-xl'>
+          <button className='flex items-center p-4 text-lg sm:text-xl md:text-2xl hover:bg-white rounded-xl'>
             See all apps and extensions
             <FaChevronRight />
           </button>
