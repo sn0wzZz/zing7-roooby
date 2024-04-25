@@ -4,13 +4,15 @@ import Article from './Aritcle'
 import useWindowDimensions from '@/app/utils/useWindowDimensions'
 import { useFilterContext } from '../contexts/FilterContext'
 
-export default function Articles({ articlesData }: any) {
+export default function Articles({ articlesData, latest }: any) {
   const { width } = useWindowDimensions()
-  const { filterValue } = useFilterContext()
+  const { filterValue = '*' } = useFilterContext()
 
   let filteredArticleData
 
-  if (filterValue === '*') {
+  if(latest){
+    filteredArticleData = articlesData.slice(-2)
+  }else if (filterValue === '*') {
     filteredArticleData = articlesData
   } else {
     filteredArticleData = articlesData.filter(
@@ -20,7 +22,7 @@ export default function Articles({ articlesData }: any) {
 
   console.log(filteredArticleData)
 
-  if (filteredArticleData.length === 0)
+  if (filteredArticleData?.length === 0)
     return (
       <div>
         <h2 className='w-full h-full text-black'>No articles</h2>
@@ -30,11 +32,11 @@ export default function Articles({ articlesData }: any) {
   return (
     <div
       className={`grid grid-cols-1 gap-10 sm:grid-cols-2 ${
-        articlesData?.length > 3 && 'lg:grid-cols-3 lg:gap-y-32'
+        filteredArticleData?.length >= 2&& !latest && 'lg:grid-cols-3 lg:gap-y-32'
       }`}
     >
-      {filteredArticleData.map((article: any, i: number) => {
-        if (width && width > 1024) {
+      {filteredArticleData?.map((article: any, i: number) => {
+        if (width && width > 1024 && !latest) {
           if (i === 0) {
             return <Article key={i} article={article} highlight />
           } else if (i > 0 && i < 7) {

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { newsData } from '@/public/data'
+import { newsData2 } from '@/public/data'
 
 import Container from '../ui/Container'
 import ButtonMore from '../ui/ButtonMore'
@@ -14,7 +14,7 @@ export default function News() {
         <h1>What’s new at Roooby?</h1>
         <ButtonMore />
       </div>
-      <Articles data={newsData} />
+      <Articles articlesData={newsData2} latest />
     </Container>
   )
 }
