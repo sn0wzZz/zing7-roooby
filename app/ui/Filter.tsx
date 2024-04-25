@@ -11,7 +11,7 @@ export default function Filter({ filterData }: any) {
   }
   return (
     <Container bgColor='bg-background-main' noPadding>
-      <div className='flex gap-4 overflow-scroll '>
+      <div className='flex gap-4 overflow-x-scroll sm:overflow-hidden scrollbar-hidden '>
         {filterData.map(({ value, label }: any, i: number) => (
           <button
             onClick={() => handleFilter(value ? value : label)}
