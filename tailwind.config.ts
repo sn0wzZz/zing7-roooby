@@ -13,6 +13,10 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      screens:{
+        'ultrawide-md': '1900px',
+        'ultrawide-lg': '2600px'
+      },
       colors: {
         primary: '#150050',
         'primary-active': '#1e0a57',
@@ -24,6 +28,7 @@ const config: Config = {
         'p-secondary': '#9d9d9d',
         'p-main': '#404040',
         'p-el': '#787878',
+        'p-inactive': '#777777',
         'f-banner-1': '#004050',
         'f-banner-2': '#ffe377',
         'f-banner-3': '#00cc61',

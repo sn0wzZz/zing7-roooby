@@ -4,7 +4,6 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import Container from '../ui/Container'
 
-
 export default function Benefits() {
   const [isHovering, setIsHovering] = useState<number | null>(null)
   const handleHover = (i: number | null) => setIsHovering(i)

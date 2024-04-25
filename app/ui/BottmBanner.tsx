@@ -4,12 +4,13 @@ import Container from './Container'
 
 export default function BottmBanner() {
   return (
-    <div className='w-[100vw] bg-f-banner-1 z-0'>
-      <div className='container relative mx-auto overflow-hidden'>
-        <div className='absolute w-[200vw] h-[20vh] md:w-[45vw] md:h-[45vw] bg-f-banner-2  xl:w-[600px] -right-36 bottom-0 md:top-0'></div>
-        <div className='absolute w-[70vh] h-[70vh] sm:w-[90vh] sm:h-[90vh] md:w-[50vw] md:h-[50vw] xl:w-[700px] bg-f-banner-3 rounded-full -right-32 top-72  md:top-24   '></div>
+    <div className='w-[100vw] bg-f-banner-1 z-0 relative overflow-hidden'>
+      <div className='absolute w-[200vw] h-[20vh] md:w-[45vw] md:h-[100vw] bg-f-banner-2 md:right-0   xl:w-[800px] ultrawide-md:right-[0%] full ultrawide-lg:right-[20%]  xl:-right-[5%]  2xl:-right-[5%] bottom-0 md:top-0'></div>
 
-        <div className='h-[500px] col-span-12  z-0'>
+      <div className='absolute w-[70vh] h-[70vh] sm:w-[90vh] sm:h-[90vh] md:w-[50vw] md:h-[100vw] md:right-0 md:top-36  xl:w-[1200px] bg-f-banner-3 rounded-full xl:-right-[5%]  2xl:-right-[5%] top-72    ultrawide-md:-right-[10%] ultrawide-lg:right-[20%]  '></div>
+
+      <div className='container relative mx-auto '>
+        <div className='h-[500px] col-span-12'>
           <div className='absolute z-30 flex flex-col items-center justify-around w-full h-full md:flex-row'>
             <div className='flex flex-col gap-5 m-10 text-white lg:gap-10'>
               <h1 className=''>

@@ -1,6 +1,6 @@
+'use client'
 import Image from 'next/image'
-import React from 'react'
-
+import React, { useState } from 'react'
 import Logo from '@/public/Roooby.svg'
 import {
   FaChevronRight,
@@ -45,6 +45,18 @@ const company = [
 ]
 
 export default function Footer() {
+  const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false)
+  const [selectedLanguage, setSelectedLanguage] = useState('English') // Default language
+
+  const toggleLanguageMenu = () => {
+    setIsLanguageMenuOpen((prevIsLanguageMenuOpen) => !prevIsLanguageMenuOpen)
+  }
+
+  const changeLanguage = (language:any) => {
+    setSelectedLanguage(language)
+    toggleLanguageMenu()
+  }
+
   return (
     <footer className='grid grid-cols-1 col-span-12 p-10 xl:grid-cols-12'>
       <div className='container grid grid-cols-2 col-span-12 gap-5 mx-auto mb-5 md:grid-cols-4 lg:grid-cols-6 grid-rows-auto md:mb-10 lg:mb-32 xl:col-span-10 xl:col-start-2'>
@@ -77,7 +89,7 @@ export default function Footer() {
             </span>
             <div className='flex flex-col gap-2'>
               {tab.links.map((link, i) => (
-                <a key={i} href='#'>
+                <a key={i} href='#' className='w-max'>
                   {capitalizeFirstLetter(link)}
                 </a>
               ))}
@@ -92,12 +104,55 @@ export default function Footer() {
           <a href='#'>Privacy Policy</a>
           <a href='#'>Cookies</a>
         </div>
-        <div className='flex items-center gap-2'>
-          <BsGlobe />
-          <div className='flex items-center'>
-            <span>English</span>
-            <FaChevronRight size={12} />
+
+        <div className='relative inline-block text-left'>
+          <div>
+            <button
+              type='button'
+              onClick={toggleLanguageMenu} // Add onClick handler to toggle menu
+              className='inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold  shadow-sm ring-gray-300 hover:bg-gray-50'
+              id='menu-button'
+              aria-expanded='true'
+              aria-haspopup='true'
+            >
+              <div className='flex items-center gap-2'>
+                <BsGlobe />
+                <span>{selectedLanguage}</span>
+                <FaChevronRight size={12} />
+              </div>
+            </button>
           </div>
+
+          {/* Conditional rendering for language options menu */}
+          {isLanguageMenuOpen && (
+            <div
+              className='absolute right-0 w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg -top-24 ring-1 ring-black ring-opacity-5 focus:outline-none'
+              role='menu'
+              aria-orientation='vertical'
+              aria-labelledby='menu-button'
+            >
+              <div className='py-1' role='none'>
+                <a
+                 
+                  className='block px-4 py-2 text-sm text-gray-700'
+                  role='menuitem'
+                  id='menu-item-0'
+                  onClick={() => changeLanguage('English')} // Change language to English
+                >
+                  English
+                </a>
+                <a
+                  
+                  className='block px-4 py-2 text-sm text-gray-700'
+                  role='menuitem'
+                  id='menu-item-1'
+                  onClick={() => changeLanguage('Bulgarian')} // Change language to Bulgarian
+                >
+                  Bulgarian
+                </a>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </footer>

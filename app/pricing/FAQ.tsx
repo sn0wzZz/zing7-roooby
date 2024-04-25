@@ -1,12 +1,12 @@
 'use client'
-import React, { useState } from 'react';
-import Container from '../ui/Container';
-import { faqData } from '@/public/data';
+import React, { useState } from 'react'
+import Container from '../ui/Container'
+import { faqData } from '@/public/data'
 
 export default function FAQ() {
-  const [active, setActive] = useState<null | number>(null);
+  const [active, setActive] = useState<null | number>(null)
 
-  const handleAccord = (i: number | null) => setActive(active === i ? null : i);
+  const handleAccord = (i: number | null) => setActive(active === i ? null : i)
 
   return (
     <Container>

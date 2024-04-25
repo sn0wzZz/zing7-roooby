@@ -1,18 +1,26 @@
 import { FaChevronRight } from 'react-icons/fa6'
 
-export default function ButtonMore({ children, onClick, variant2 }: any) {
+export default function ButtonMore({
+  children,
+  onClick,
+  variant2,
+  variant3,
+}: any) {
   return (
     <button
       onClick={onClick}
-      className={`flex items-center text-xl text-black ${
-        variant2 ? 'hover:bg-white' : 'hover:bg-background-main'
-      } p-2 md:p-5 rounded-lg max-w-max`}
+      className={`flex items-center text-xl ${
+        variant3 ? 'text-white' : 'text-black'
+      } ${variant2 ? 'hover:bg-white' : 'hover:bg-background-main'} 
+      ${variant3 && 'bg-f-banner-3 hover:bg-green-400'}
+       p-2 md:p-5 rounded-xl max-w-max`}
     >
       <div className='flex items-center'>
         <span className='mr-2 whitespace-nowrap'>{children || 'See all'}</span>
-        <FaChevronRight className='text-f-banner-3' />
+        <FaChevronRight
+          className={`${variant3 ? 'text-white' : 'text-f-banner-3'}`}
+        />
       </div>
     </button>
   )
 }
-

@@ -158,6 +158,95 @@ export const newsData = [
     image: News2,
   },
 ]
+export const newsData2 = [
+  {
+    tag: 'service',
+    title: 'How To Deliver a Successful Product Launch 1',
+    date: '2024-09-05',
+    content: {
+      main:''
+    },
+    publisher: 'Joshua Nash',
+    image: News1,
+  },
+  {
+    tag: 'service',
+    title: 'What Makes an Authentic Employee Profile, and Why Does It Matter? 2',
+    date: '2024-09-07',
+    publisher: 'Ivan Neshev',
+    image: News2,
+  },
+  {
+    tag: 'service',
+    title: 'How To Deliver a Successful Product Launch 3',
+    date: '2024-09-05',
+    publisher: 'Joshua Nash',
+    image: News1,
+  },
+  {
+    tag: 'service',
+    title: 'What Makes an Authentic Employee Profile, and Why Does It Matter? 4',
+    date: '2024-09-07',
+    publisher: 'Ivan Neshev',
+    image: News2,
+  },
+  {
+    tag: 'service',
+    title: 'How To Deliver a Successful Product Launch 5',
+    date: '2024-09-05',
+    publisher: 'Joshua Nash',
+    image: News1,
+  },
+  {
+    tag: 'service',
+    title: 'What Makes an Authentic Employee Profile, and Why Does It Matter? 6',
+    date: '2024-09-07',
+    publisher: 'Ivan Neshev',
+    image: News2,
+  },
+  {
+    tag: 'service',
+    title: 'How To Deliver a Successful Product Launch 7',
+    date: '2024-09-05',
+    publisher: 'Joshua Nash',
+    image: News1,
+  },
+  {
+    tag: 'service',
+    title: 'What Makes an Authentic Employee Profile, and Why Does It Matter? 8',
+    date: '2024-09-07',
+    publisher: 'Ivan Neshev',
+    image: News2,
+  },
+  {
+    tag: 'service',
+    title: 'How To Deliver a Successful Product Launch 9',
+    date: '2024-09-05',
+    publisher: 'Joshua Nash',
+    image: News1,
+  },
+  {
+    tag: 'marketing',
+    title: 'What Makes an Authentic Employee Profile, and Why Does It Matter? 10',
+    date: '2024-09-07',
+    publisher: 'Ivan Neshev',
+    image: News2,
+  },
+  {
+    tag: 'marketing',
+    title: 'How To Deliver a Successful Product Launch 11',
+    date: '2024-09-05',
+    publisher: 'Joshua Nash',
+    image: News1,
+  },
+  {
+    tag: 'news',
+    title: 'What Makes an Authentic Employee Profile, and Why Does It Matter? 12',
+    date: '2024-09-07',
+    publisher: 'Ivan Neshev',
+    image: News2,
+  },
+]
 
 export const resultsData = [
   {
@@ -314,5 +403,24 @@ export const faqData = [
     question: 'How Can I Add More Emails To My Account?',
     answer:
       'Rooby CRM offers the most affordable, comprehensive platform to manage the entire customer journey, from generating leads, to closing deals and supporting your customers. With a full suite of CRM, sales enablement, marketing automation, and help desk/customer support capabilities, it’s all you need to manage the entire customer lifecycle. Most of our competitors offer one or two of these functions as separate products, leaving you with the headache of integrating them and increasing the overall price point.',
+  },
+]
+
+export const filterData =[
+  {
+    label: 'All Articles',
+    value: '*'
+  },
+  {
+    label: 'sales',
+  },
+  {
+    label: 'marketing',
+  },
+  {
+    label: 'service',
+  },
+  {
+    label: 'news',
   },
 ]

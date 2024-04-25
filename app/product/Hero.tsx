@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { partnersData } from '@/public/data'
 import toast from 'react-hot-toast'
 import { isValidEmail } from '../utils/helpers'
-
+import Partners from '../ui/Partners'
 
 export default function Hero() {
   const [input, setInput] = useState('')
@@ -38,8 +38,7 @@ export default function Hero() {
           <div>
             <div className='flex flex-col gap-5'>
               <h1 className='text-primary'>
-                Bringing companies and customers together,
-                anywhere
+                Bringing companies and customers together, anywhere
               </h1>
               <p className='text-p-secondary'>
                 An awesome & powefull tools for your business, increase business{' '}
@@ -76,7 +75,7 @@ export default function Hero() {
           </div>
           {/* Right side */}
 
-          <div className='relative w-full md:w-[50vw] h-[300px] md:h-[500px] lg:h-[500px] '>
+          <div className='relative w-full md:w-[50vw] h-[300px] md:h-[500px] lg:h-[900px] '>
             <Image
               src={Product}
               alt='banner'
@@ -85,18 +84,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className='flex flex-col items-center gap-5 my-4 lg:flex-row lg:gap-20 lg:my-20'>
-          <p className='w-full font-bold lg:w-auto text-p-secondary'>
-            Trusted by 1,000+ customers
-          </p>
-          <div className='grid justify-center grid-cols-3 gap-5 sm:grid-cols-4 md:grid-cols-5 xl:grid-cols-5 md:gap-16 xl:gap-20'>
-            {partnersData.map((partner, i) => (
-              <div key={i} className='flex justify-center '>
-                <Image src={partner} alt='logo' />
-              </div>
-            ))}
-          </div>
-        </div>
+      
       </div>
     </div>
   )

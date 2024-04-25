@@ -7,7 +7,7 @@ import { capitalizeFirstLetter } from '@/app/utils/helpers'
 import { usePathname } from 'next/navigation'
 import Container from './Container'
 
-const navLinks = ['product', 'pricing', 'company', 'resources', 'contact']
+const navLinks = ['product', 'pricing', 'company', 'blog', 'contact']
 
 export default function MainNav() {
   const pathname = usePathname()
@@ -66,7 +66,7 @@ export default function MainNav() {
         ${
           menuIsOpen ? 'translate-x-0' : 'translate-x-full'
         } transition-all duration-200 ease-linear
-        lg:translate-x-0 lg:bg-transparent lg:shadow-none lg:h-auto lg:top-none lg:right-none lg:flex-row lg:items-center lg:relative lg:w-[60vw]  lg:justify-between   
+        lg:translate-x-0 lg:bg-transparent lg:shadow-none lg:h-auto lg:top-none lg:right-none lg:flex-row lg:items-center lg:relative lg:w-[70vw]  ultrawide-lg:w-[60vw]  lg:justify-between   
         `}
         >
           <ul className=' h-[50vh]  flex flex-col  justify-evenly lg:flex-row lg:items-center  lg:h-auto lg:justify-normal '>
