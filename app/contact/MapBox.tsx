@@ -1,7 +1,17 @@
+import { useMemo } from 'react'
 import TextDetail from '../ui/TextDetail'
-import MapComponent from '../ui/MapComponent'
+import dynamic from 'next/dynamic'
 
 export default function MapBox() {
+  const Map = useMemo(
+    () =>
+      dynamic(() => import('@/app/ui/MapComponent'), {
+        loading: () => <p>A map is loading</p>,
+        ssr: false,
+      }),
+    []
+  )
+
   return (
     <div>
       <TextDetail
@@ -10,7 +20,7 @@ export default function MapBox() {
       />
 
       <div className='w-full '>
-        <MapComponent  />
+        <Map />
       </div>
 
       <div className='flex justify-between'>
