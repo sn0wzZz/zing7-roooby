@@ -48,7 +48,7 @@ export default function Article({
             <div className='flex flex-col gap-10'>
               <h2>{article.content.main.heading}</h2>
               {article.content.main.paragraphs.map((paragraph, i) => (
-                <p>{paragraph}</p>
+                <p key={i}>{paragraph}</p>
               ))}
 
               <div className='flex flex-col gap-5 py-5 border border-y-p-el border-x-0'>
@@ -77,7 +77,7 @@ export default function Article({
               <h3>{article.content.sub.subheading}</h3>
 
               {article.content.sub.paragraphs.map((paragraph, i) => (
-                <p className='text-lg'>{paragraph}</p>
+                <p key={i} className='text-lg'>{paragraph}</p>
               ))}
             </div>}
 
