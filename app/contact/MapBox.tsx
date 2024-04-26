@@ -10,7 +10,7 @@ export default function MapBox() {
       />
 
       <div className='w-full '>
-        <MapComponent  />
+        {/* <MapComponent  /> */}
       </div>
 
       <div className='flex justify-between'>
