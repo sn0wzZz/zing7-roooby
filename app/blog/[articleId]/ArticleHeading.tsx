@@ -16,7 +16,7 @@ export default function ArticleHeading({
 }) {
   return (
     <div className={`grid grid-cols-12 article `}>
-      <div className='flex flex-col col-span-12 gap-5 xl:col-start-2 lxl:col-span-10'>
+      <div className='flex flex-col col-span-12 gap-5 xl:col-start-2 xl:col-span-10'>
         <p className='text-base font-bold text-p-el w-max'>
           {article.tag?.toUpperCase()}
         </p>

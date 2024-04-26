@@ -32,8 +32,8 @@ export default function Hero() {
 
   return (
     <div className='grid grid-cols-12 mx-auto bg-background-main'>
-      <div className='container flex-col col-span-12 p-5 mx-auto lex m xl:col-span-12 md:p-10'>
-        <div className='flex flex-col w-full md:flex-row'>
+      <div className='container flex-col col-span-12 p-5 mx-auto flexx xl:col-span-10 xl:col-start-2 md:p-10'>
+        <div className='grid grid-cols-1 gap-5 lg:grid-cols-2'>
           {/* Left side */}
           <div>
             <div className='flex flex-col gap-5'>
@@ -75,16 +75,14 @@ export default function Hero() {
           </div>
           {/* Right side */}
 
-          <div className='relative w-full md:w-[50vw] h-[300px] md:h-[500px] lg:h-[900px] '>
+          <div className='relative w-full md:w-[50vw] h-[300px] md:h-[400px] lg:h-[500px] '>
             <Image
               src={Product}
               alt='banner'
-              className='absolute top-0 -right-[25vw] md:-right-[15vw] lg:-right-[10vw] xl:-right-[5vw]  h-full w-full '
+              className='absolute top-0  md:-right-[15vw] lg:-right-[10vw] xl:-right-[5vw] 2xl:-right-[10vw]   h-full w-full '
             />
           </div>
         </div>
-
-      
       </div>
     </div>
   )
