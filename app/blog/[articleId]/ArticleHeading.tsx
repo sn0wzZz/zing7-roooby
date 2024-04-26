@@ -1,14 +1,6 @@
 import { formatDate } from '@/app/utils/helpers'
 
-export default function ArticleHeading({
-  article,
-}: {
-  article: { title: string; date: string; publisher: {
-    name:string,
-    position: string,
-    avatar:any
-  }; tag: string }
-}) {
+export default function ArticleHeading({ article }: any) {
   return (
     <div className={`grid grid-cols-12 article `}>
       <div className='flex flex-col col-span-12 gap-5 xl:col-start-2 lxl:col-span-10'>
@@ -19,7 +11,9 @@ export default function ArticleHeading({
         <h2 className=''>{article.title}</h2>
         <p className='text-base'>
           {formatDate(article.date)},{' '}
-          <span className='text-base text-p-el'>by {article.publisher.name}</span>
+          <span className='text-base text-p-el'>
+            by {article.publisher.name}
+          </span>
         </p>
       </div>
     </div>

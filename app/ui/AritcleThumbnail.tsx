@@ -10,7 +10,6 @@ export default function AritcleThumbnail({
   art2,
   children,
 }: any) {
-  const goToArticle = (id:number) => {}
 
   if (sub)
     return (
