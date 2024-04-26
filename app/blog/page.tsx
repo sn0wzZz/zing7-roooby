@@ -14,7 +14,6 @@ export default function page() {
       </Header>
       <Filter filterData={filterData} />
       <Container>
-
       <Articles articlesData={newsData2}/>
       </Container>
     </>

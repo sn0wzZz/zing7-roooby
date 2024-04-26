@@ -9,7 +9,7 @@ export default function ButtonMore({
   return (
     <button
       onClick={onClick}
-      className={`flex items-center text-xl ${
+      className={`flex items-center text-base lg:text-xl ${
         variant3 ? 'text-white' : 'text-black'
       } ${variant2 ? 'hover:bg-white' : 'hover:bg-background-main'} 
       ${variant3 && 'bg-f-banner-3 hover:bg-green-400'}

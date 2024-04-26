@@ -14,7 +14,6 @@ export default function Form() {
   const {
     register,
     handleSubmit,
-    getValues,
     watch,
     formState: { errors },
   } = useForm<Inputs>()
@@ -26,12 +25,12 @@ export default function Form() {
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className='flex flex-col items-start gap-10 last:h-full'
+      className='flex flex-col items-start gap-5 lg:gap-10 last:h-full'
     >
       {/* register your input into the hook by invoking the "register" function */}
       <FormInput error={errors.name}>
         <input
-          className='form-input'
+          className={`form-input ${errors.name && ' border-red-500'}`}
           placeholder='Your Name'
           {...register('name', {
             required: { value: true, message: 'This field is required!' },
@@ -48,7 +47,7 @@ export default function Form() {
       </FormInput>
       <FormInput error={errors.email}>
         <input
-          className='form-input'
+          className={`form-input ${errors.email && ' border-red-500'}`}
           placeholder='Your Email'
           {...register('email', {
             required: { value: true, message: 'This field is required!' },
@@ -68,7 +67,7 @@ export default function Form() {
 
       <FormInput error={errors.message} full>
         <textarea
-          className='h-full form-input'
+          className={`form-input h-full ${errors.message && ' border-red-500'}`}
           placeholder='Message'
           {...register('message', {
             required: { value: true, message: 'This field is required!' },

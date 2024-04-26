@@ -1,36 +1,46 @@
 import Image from 'next/image'
 import { formatDate } from '../utils/helpers'
+import Link from 'next/link'
 
-export default function Aritcle({
+export default function AritcleThumbnail({
   article,
   highlight,
   subGrid,
   sub,
+  art2,
   children,
 }: any) {
+  const goToArticle = (id:number) => {}
+
   if (sub)
     return (
-      <div className='flex flex-col h-full gap-5 mt-12 hover:cursor-pointer '>
+      <Link
+        href={`/blog/${article.id}`}
+        className={`flex flex-col h-full gap-2 mt-12 hover:cursor-pointer article-sub `}
+      >
         <div className='border-t border-p-el'></div>
-        <h2 className='h-full'>{article.title}</h2>
+        <h4 className='h-full'>{article.title}</h4>
         <div className='flex justify-between'>
           <p>
             {formatDate(article.date)},{' '}
-            <span className='text-base text-p-el'>by {article.publisher}</span>
+            <span className='text-base text-p-el'>
+              by {article.publisher.name}
+            </span>
           </p>
           <p className='text-lg font-bold text-p-el w-max'>
             {article.tag?.toUpperCase()}
           </p>
         </div>
-      </div>
+      </Link>
     )
 
   if (subGrid)
     return (
-      <div
-        className={`grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 hover:cursor-pointer  ${
-          highlight || (subGrid && 'lg:col-span-3')
-        }`}
+      <Link
+        href={`/blog/${article.id}`}
+        className={`grid grid-cols-1 md:grid-cols-2  gap-5 md:gap-10 hover:cursor-pointer article ${
+          art2 ? 'hover:bg-white' : 'hover:bg-background-main'
+        } ${highlight || (subGrid && 'lg:col-span-3')}`}
       >
         <div className='flex flex-col h-full gap-5 last:mt-auto'>
           <p className='text-lg font-bold text-p-el w-max'>
@@ -42,25 +52,28 @@ export default function Aritcle({
             src={article.image}
             alt={article.title}
           />
-          <h2 className='h-full'>{article.title}</h2>
+          <h3 className='h-full'>{article.title}</h3>
 
           <p>
             {formatDate(article.date)},{' '}
-            <span className='text-base text-p-el'>by {article.publisher}</span>
+            <span className='text-base text-p-el'>
+              by {article.publisher.name}
+            </span>
           </p>
           <div className='border-t border-p-el'></div>
         </div>
 
         <div>{children}</div>
-      </div>
+      </Link>
     )
 
   if (highlight)
     return (
-      <div
-        className={`grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-10 hover:cursor-pointer  ${
+      <Link
+        href={`/blog/${article.id}`}
+        className={`grid grid-cols-1 lg:grid-cols-2   gap-5 md:gap-10 hover:cursor-pointer article ${
           highlight && 'lg:col-span-3'
-        }`}
+        } ${art2 ? 'hover:bg-white' : 'hover:bg-background-main'}`}
       >
         <div className='flex flex-col h-full gap-5 last:mt-auto'>
           <div className='border-t border-p-el'></div>
@@ -71,7 +84,9 @@ export default function Aritcle({
 
           <p>
             {formatDate(article.date)},{' '}
-            <span className='text-base text-p-el'>by {article.publisher}</span>
+            <span className='text-base text-p-el'>
+              by {article.publisher.name}
+            </span>
           </p>
           <div className='border-t border-p-el'></div>
         </div>
@@ -81,11 +96,14 @@ export default function Aritcle({
           src={article.image}
           alt={article.title}
         />
-      </div>
+      </Link>
     )
 
   return (
-    <div className='flex flex-col gap-5 hover:cursor-pointer '>
+    <Link
+      href={`/blog/${article.id}`}
+      className={`flex flex-col gap-5 hover:cursor-pointer article ${art2? 'hover:bg-white': 'hover:bg-background-main'} `}
+    >
       <p className='text-lg font-bold text-p-el w-max'>
         {article.tag?.toUpperCase()}
       </p>
@@ -98,8 +116,8 @@ export default function Aritcle({
       <h4 className='h-full'>{article.title}</h4>
       <p>
         {formatDate(article.date)},{' '}
-        <span className='text-base text-p-el'>by {article.publisher}</span>
+        <span className='text-base text-p-el'>by {article.publisher.name}</span>
       </p>
-    </div>
+    </Link>
   )
 }

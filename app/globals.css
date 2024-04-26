@@ -45,7 +45,7 @@
     @apply text-3xl font-bold xl:text-5xl;
   }
   h3 {
-    @apply text-lg font-bold sm:text-xl md:text-lg lg:text-xl xl:text-2xl;
+    @apply text-lg font-bold sm:text-xl md:text-lg lg:text-xl xl:text-3xl;
   }
   h4 {
     @apply text-xl font-bold md:text-2xl lg:text-2xl;
@@ -64,7 +64,7 @@
     @apply hover:underline hover:cursor-pointer;
   }
 
-  button {
+  button, .article, .article-sub {
     @apply transition-all duration-200 ease-linear;
   }
 
@@ -92,6 +92,13 @@
     @apply border-b-f-banner-3 text-black
   }
   .form-input{
-    @apply p-2 md:p-5 rounded-xl font-medium text-lg
+    @apply p-2 md:p-5 rounded-xl font-medium text-lg ring-0 outline-0 border border-white
+  }
+  
+  .article{
+    @apply rounded-xl p-5 hover:no-underline
+  }
+  .article-sub{
+    @apply rounded-xl p-2 hover:bg-white hover:no-underline
   }
 }

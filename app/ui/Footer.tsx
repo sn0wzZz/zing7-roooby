@@ -10,6 +10,7 @@ import {
 } from 'react-icons/fa6'
 import { capitalizeFirstLetter } from '../utils/helpers'
 import { BsGlobe } from 'react-icons/bs'
+import Links from './Links'
 
 const company = [
   {
@@ -69,17 +70,7 @@ export default function Footer() {
             <br />
             sales and marketing solution for SMBs
           </p>
-          <div className='flex gap-6'>
-            <button className='button-social bg-twitter'>
-              <FaXTwitter className='size-6 lg:size-5' />
-            </button>
-            <button className='button-social bg-facebook'>
-              <FaFacebookF className='size-6 lg:size-5' />
-            </button>
-            <button className='button-social bg-linkedin'>
-              <FaLinkedinIn className='size-6 lg:size-5' />
-            </button>
-          </div>
+          <Links />
         </div>
 
         {company.map((tab, i) => (
@@ -87,9 +78,9 @@ export default function Footer() {
             <span className='text-base font-extrabold'>
               {capitalizeFirstLetter(tab.name)}
             </span>
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col items-start gap-2'>
               {tab.links.map((link, i) => (
-                <a key={i} href='#' className='w-max'>
+                <a key={i} href='#' className=''>
                   {capitalizeFirstLetter(link)}
                 </a>
               ))}

@@ -1,18 +1,20 @@
 'use client'
 import React from 'react'
-import Article from './Aritcle'
+import ArticleThumbnail from './AritcleThumbnail'
 import useWindowDimensions from '@/app/utils/useWindowDimensions'
 import { useFilterContext } from '../contexts/FilterContext'
 
-export default function Articles({ articlesData, latest }: any) {
+export default function Articles({ articlesData, latest, latest2, art2 }: any) {
   const { width } = useWindowDimensions()
   const { filterValue = '*' } = useFilterContext()
 
   let filteredArticleData
 
-  if(latest){
+  if (latest) {
     filteredArticleData = articlesData.slice(-2)
-  }else if (filterValue === '*') {
+  } else if (latest2) {
+    filteredArticleData = articlesData.slice(-3)
+  } else if (filterValue === '*') {
     filteredArticleData = articlesData
   } else {
     filteredArticleData = articlesData.filter(
@@ -20,48 +22,68 @@ export default function Articles({ articlesData, latest }: any) {
     )
   }
 
-  console.log(filteredArticleData)
-
-  if (filteredArticleData?.length === 0)
+  if (filteredArticleData.length === 0) {
     return (
       <div>
-        <h2 className='w-full h-full text-black'>No articles</h2>
+        <h2 className='text-p-secondary'>No {filterValue} articles</h2>
       </div>
     )
+  }
+
+  const renderArticleThumbnails = () => {
+    return filteredArticleData.map((article: any, i: number) => (
+      <ArticleThumbnail key={i} article={article} art2={art2} />
+    ))
+  }
 
   return (
     <div
-      className={`grid grid-cols-1 gap-10 sm:grid-cols-2 ${
-        filteredArticleData?.length >= 2&& !latest && 'lg:grid-cols-3 lg:gap-y-32'
+      className={`grid grid-cols-1 gap-5 sm:grid-cols-2 ${
+        filteredArticleData.length >= 2 && !latest
+          ? 'lg:grid-cols-3 lg:gap-y-32'
+          : ''
       }`}
     >
-      {filteredArticleData?.map((article: any, i: number) => {
-        if (width && width > 1024 && !latest) {
+      {width &&
+        width > 1024 &&
+        !latest &&
+        !latest2 &&
+        filteredArticleData.map((article: any, i: number) => {
           if (i === 0) {
-            return <Article key={i} article={article} highlight />
-          } else if (i > 0 && i < 7) {
-            return <Article key={i} article={article} />
+            return (
+              <ArticleThumbnail
+                key={i}
+                article={article}
+                highlight
+                art2={art2}
+              />
+            )
           } else if (i === 7) {
             return (
-              <Article key={i} article={article} subGrid>
-                {/* Subgrid for additional articles */}
-                <div className='grid grid-cols-1 gap-10 '>
-                  {/* Assuming articlesData contains at least 3 more articles */}
+              <ArticleThumbnail key={i} article={article} subGrid art2={art2}>
+                <div className='grid grid-cols-1 gap-10'>
                   {articlesData
                     .slice(8, 11)
                     .map((extraArticle: any, j: number) => (
-                      <Article key={j} article={extraArticle} sub />
+                      <ArticleThumbnail
+                        key={j}
+                        article={extraArticle}
+                        sub
+                        art2={art2}
+                      />
                     ))}
                 </div>
-              </Article>
+              </ArticleThumbnail>
             )
           } else if (i >= 11) {
-            return <Article key={i} article={article} />
+            return <ArticleThumbnail key={i} article={article} art2={art2} />
+          } else {
+            return <ArticleThumbnail key={i} article={article} art2={art2} />
           }
-        } else {
-          return <Article key={i} article={article} />
-        }
-      })}
+        })}
+      {!width || width <= 1024 || latest || latest2
+        ? renderArticleThumbnails()
+        : null}
     </div>
   )
 }

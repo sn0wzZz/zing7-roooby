@@ -15,7 +15,8 @@ const config: Config = {
       },
       screens:{
         'ultrawide-md': '1900px',
-        'ultrawide-lg': '2600px'
+        'ultrawide-lg': '2600px',
+        'ultrawide-xl': '3200px'
       },
       colors: {
         primary: '#150050',
