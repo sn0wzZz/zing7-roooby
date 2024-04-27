@@ -14,7 +14,7 @@ export default function ButtonMore({
         variant3 ? 'text-white' : 'text-black'
       } ${variant2 ? 'hover:bg-white' : 'hover:bg-background-main'} 
       ${variant3 && 'bg-f-banner-3 hover:bg-green-400'}
-       p-2 md:p-5 rounded-xl max-w-max`}
+       p-2 md:p-5 rounded-lg max-w-max`}
     >
       <div className='flex items-center'>
         <span className='mr-2 font-bold whitespace-nowrap'>{children || 'See all'}</span>

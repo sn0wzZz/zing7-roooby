@@ -92,7 +92,7 @@
     @apply border-b-f-banner-3 text-black
   }
   .form-input{
-    @apply p-2 md:p-5 rounded-xl font-medium text-lg ring-0 outline-0 border border-white
+    @apply p-2 md:p-5 rounded-lg font-medium text-lg ring-0 outline-0 border border-white
   }
   
   .article{
