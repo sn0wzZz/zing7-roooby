@@ -66,7 +66,7 @@ export default function MainNav() {
         ${
           menuIsOpen ? 'translate-x-0' : 'translate-x-full'
         } transition-all duration-200 ease-linear
-        lg:translate-x-0 lg:bg-transparent lg:shadow-none lg:h-auto lg:top-none lg:right-none lg:flex-row lg:items-center lg:relative lg:w-[60vw]  ultrawide-lg:w-[40vw]  lg:justify-between   
+        lg:translate-x-0 lg:bg-transparent lg:shadow-none lg:h-auto lg:top-none lg:right-none lg:flex-row lg:items-center lg:relative  lg:w-[70vw] xl:w-[75vw] 2xl:w-[60vw] ultrawide-md:w-[50vw]  ultrawide-lg:w-[45vw] ultrawide-xl:w-[30vw]  lg:justify-between   
         `}
         >
           <ul className=' h-[50vh]  flex flex-col  justify-evenly lg:flex-row lg:items-center  lg:h-auto lg:justify-normal '>
