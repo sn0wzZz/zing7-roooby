@@ -42,7 +42,7 @@ export default function MapComponent() {
   console.log(center)
 
   return (
-    <div  className='h-[250px] md:h-[400px]'>
+    <div  className='h-[250px] sm:h-[400px]'>
       {center ? (
         <MapContainer
           center={center}
