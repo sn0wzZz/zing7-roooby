@@ -16,7 +16,7 @@ export default function ButtonMore({
       ${variant3 && 'bg-f-banner-3 hover:bg-green-400'}
        p-2 md:p-5 rounded-lg max-w-max`}
     >
-      <span className='mr-2 font-bold whitespace-nowrap'>
+      <span className={`${!noArr&&'mr-2'} font-bold whitespace-nowrap`}>
         {children || 'See all'}
       </span>
       {!noArr && (
