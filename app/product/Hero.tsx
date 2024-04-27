@@ -42,10 +42,8 @@ export default function Hero() {
               </h1>
               <p className='text-p-secondary'>
                 An awesome & powefull tools for your business, increase business{' '}
-                <br />
                 revenue with enterprise-grade links built to acquire and engage{' '}
-                <br />
-                cutomers. <br />
+                cutomers.
               </p>
             </div>
             <div className='flex mt-5 mb-2 md:mt-10 lg:mt-20 2xl:mt-32 flex-nowrap'>

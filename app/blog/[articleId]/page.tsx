@@ -86,7 +86,7 @@ export default function Article({
               </div>
             )}
 
-            <div className='flex items-center justify-between p-10 border border-y-p-el border-x-0'>
+            <div className='flex sm:items-center flex-col sm:flex-row justify-between p-10 border border-y-p-el border-x-0 gap-5'>
               <Avatar publisher={article.publisher} />
               <Links full />
             </div>

@@ -30,7 +30,7 @@ export default function Prices() {
                 <h4 className='flex items-center font-bold'>
                   {name}{' '}
                   {tag && (
-                    <span className='p-1 ml-2 text-base text-green-500 bg-green-200 rounded-md lg:text-xs'>
+                    <span className='p-1 ml-2 text-base text-green-500 bg-green-200 rounded-md lg:text-xs tag'>
                       {tag.toUpperCase()}
                     </span>
                   )}

@@ -5,6 +5,7 @@ export default function ButtonMore({
   onClick,
   variant2,
   variant3,
+  noArr
 }: any) {
   return (
     <button
@@ -16,10 +17,10 @@ export default function ButtonMore({
        p-2 md:p-5 rounded-xl max-w-max`}
     >
       <div className='flex items-center'>
-        <span className='mr-2 whitespace-nowrap'>{children || 'See all'}</span>
-        <FaChevronRight
+        <span className='mr-2 font-bold whitespace-nowrap'>{children || 'See all'}</span>
+        {!noArr&&<FaChevronRight
           className={`${variant3 ? 'text-white' : 'text-f-banner-3'}`}
-        />
+        />}
       </div>
     </button>
   )

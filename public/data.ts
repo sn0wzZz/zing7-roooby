@@ -73,7 +73,12 @@ export const perksData = [
   {
     tag: 'marketing',
     title: 'Marketing',
-    image: Perk2,
+
+    imageButton: {
+      image: Perk2,
+      label: 'Start now',
+      message: 'Automate your sales & marketing',
+    },
     content: {
       main: "Market like the most successful companies in the world with Agile CRM's marketing automation software.",
       checks: [
@@ -645,7 +650,7 @@ export const newsData2 = [
           'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"',
         ],
       },
-      
+
       quote: {
         paragraph:
           '“At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident”',
@@ -835,10 +840,10 @@ export const faqData = [
   },
 ]
 
-export const filterData =[
+export const filterData = [
   {
     label: 'All Articles',
-    value: '*'
+    value: '*',
   },
   {
     label: 'sales',

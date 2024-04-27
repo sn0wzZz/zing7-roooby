@@ -26,7 +26,7 @@ export default function AritcleThumbnail({
               by {article.publisher.name}
             </span>
           </p>
-          <p className='text-lg font-bold text-p-el w-max'>
+          <p className='text-lg font-bold text-p-el w-max tag'>
             {article.tag?.toUpperCase()}
           </p>
         </div>
@@ -42,7 +42,7 @@ export default function AritcleThumbnail({
         } ${highlight || (subGrid && 'lg:col-span-3')}`}
       >
         <div className='flex flex-col h-full gap-5 last:mt-auto'>
-          <p className='text-lg font-bold text-p-el w-max'>
+          <p className='text-lg font-bold text-p-el w-max tag'>
             {article.tag?.toUpperCase()}
           </p>
           <div className='border-t border-p-el'></div>
@@ -76,7 +76,7 @@ export default function AritcleThumbnail({
       >
         <div className='flex flex-col h-full gap-5 last:mt-auto'>
           <div className='border-t border-p-el'></div>
-          <p className='text-lg font-bold text-p-el w-max'>
+          <p className='text-lg font-bold text-p-el w-max tag'>
             {article.tag?.toUpperCase()}
           </p>
           <h2 className='h-full'>{article.title}</h2>
@@ -103,7 +103,7 @@ export default function AritcleThumbnail({
       href={`/blog/${article.id}`}
       className={`flex flex-col gap-5 hover:cursor-pointer article ${art2? 'hover:bg-white': 'hover:bg-background-main'} `}
     >
-      <p className='text-lg font-bold text-p-el w-max'>
+      <p className='text-lg font-bold text-p-el w-max tag'>
         {article.tag?.toUpperCase()}
       </p>
       <div className='border-t border-p-el'></div>

@@ -101,4 +101,8 @@
   .article-sub{
     @apply rounded-xl p-2 hover:bg-white hover:no-underline
   }
+
+  .tag{
+    @apply tracking-[1.4px]
+  }
 }

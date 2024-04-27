@@ -9,7 +9,7 @@ export default function BottmBanner() {
 
       <div className='absolute w-[70vh] h-[70vh] sm:w-[90vh] sm:h-[90vh] md:w-[50vw] md:h-[100vw] md:-right-[5%] md:top-36  xl:w-[900px] bg-f-banner-3 rounded-full xl:-right-[5%]  2xl:-right-[5%] top-72 ultrawide-xl:right-[10%]   ultrawide-md:-right-[5%] ultrawide-lg:right-[5%]  '></div>
 
-      <div className='container relative mx-auto '>
+      <div className='container relative mx-auto px-5 '>
         <div className='h-[500px] col-span-12'>
           <div className='absolute z-30 flex flex-col items-center justify-around w-full h-full md:flex-row'>
             <div className='flex flex-col gap-5 text-white lg:gap-10'>
