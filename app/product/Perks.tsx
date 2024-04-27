@@ -59,7 +59,7 @@ export default function Perks() {
                   height={700}
                 />
                 <div className='absolute z-10 flex flex-col md:flex-row items-center md:justify-between gap-5 p-3 bg-primary rounded-xl left-[10%]  right-[10%] bottom-[5%]'>
-                  <p className='mx-5 font-bold text-white text-center md:text-start'>
+                  <p className='mx-5 font-bold text-white text-center md:text-start text-base'>
                     {perk.imageButton.message}
                   </p>
                   <ButtonMore variant3 noArr>
