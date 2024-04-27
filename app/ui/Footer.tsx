@@ -101,7 +101,7 @@ export default function Footer() {
             <button
               type='button'
               onClick={toggleLanguageMenu} // Add onClick handler to toggle menu
-              className='inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold  shadow-sm ring-gray-300 hover:bg-gray-50'
+              className='inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold   '
               id='menu-button'
               aria-expanded='true'
               aria-haspopup='true'
@@ -117,7 +117,7 @@ export default function Footer() {
           {/* Conditional rendering for language options menu */}
           {isLanguageMenuOpen && (
             <div
-              className='absolute right-0 w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg -top-24 ring-1 ring-black ring-opacity-5 focus:outline-none'
+              className='absolute right-0 w-56 mt-2 origin-top-right bg-background-main rounded-md  -top-24 ring-1 ring-black ring-opacity-5 focus:outline-none'
               role='menu'
               aria-orientation='vertical'
               aria-labelledby='menu-button'
