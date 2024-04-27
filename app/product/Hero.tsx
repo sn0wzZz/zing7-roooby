@@ -32,7 +32,7 @@ export default function Hero() {
 
   return (
     <div className='grid grid-cols-12 mx-auto bg-background-main'>
-      <div className='container flex-col col-span-12 p-5 mx-auto flexx xl:col-span-10 xl:col-start-2 md:p-10'>
+      <div className='container max-w-[1440px] flex-col col-span-12 p-5 mx-auto flexx xl:col-span-10 xl:col-start-2 md:p-10'>
         <div className='grid grid-cols-1 gap-5 lg:grid-cols-2'>
           {/* Left side */}
           <div>

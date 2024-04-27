@@ -32,7 +32,7 @@ export default function MainNav() {
   return (
     <nav className='sticky top-0 w-[100vw] z-40 bg-background-main'>
       <div
-        className={`container mx-auto  w-full px-4 py-1 md:py-3 flex justify-between  items-center lg:justify-around col-span-12 `}
+        className={`container mx-auto max-w-[1440px]  w-full px-4 py-1 md:py-3 flex justify-between  items-center lg:justify-around col-span-12 `}
       >
         {/* Logo */}
         <div>
@@ -66,7 +66,7 @@ export default function MainNav() {
         ${
           menuIsOpen ? 'translate-x-0' : 'translate-x-full'
         } transition-all duration-200 ease-linear
-        lg:translate-x-0 lg:bg-transparent lg:shadow-none lg:h-auto lg:top-none lg:right-none lg:flex-row lg:items-center lg:relative lg:w-[70vw]  ultrawide-lg:w-[60vw]  lg:justify-between   
+        lg:translate-x-0 lg:bg-transparent lg:shadow-none lg:h-auto lg:top-none lg:right-none lg:flex-row lg:items-center lg:relative lg:w-[60vw]  ultrawide-lg:w-[40vw]  lg:justify-between   
         `}
         >
           <ul className=' h-[50vh]  flex flex-col  justify-evenly lg:flex-row lg:items-center  lg:h-auto lg:justify-normal '>

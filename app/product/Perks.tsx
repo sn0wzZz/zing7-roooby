@@ -27,15 +27,16 @@ export default function Perks() {
             <p>{perk.content.main}</p>
             <div className='flex flex-col gap-5'>
               {perk.content.checks.map((check, j) => (
-                <div key={j} className='flex items-center gap-4 md:gap-8 '>
-                  <FaCheck className='text-f-banner-3  ' />
-                  <p>{check}</p>
+                <div key={j} className='flex items-center gap-4 md:gap-8'>
+                  <FaCheck className='text-f-banner-3 w-6 h-6' />{' '}
+                  {/* Set width and height to 6 units */}
+                  <p className='w-full'>{check}</p>
                 </div>
               ))}
             </div>
           </div>
           <div
-            className={` relative ${
+            className={` relative flex justify-center ${
               i % 2 === 0 ? 'xl:col-start-2' : 'xl:col-start-1'
             } row-start-1`}
           >
@@ -43,17 +44,17 @@ export default function Perks() {
               <Image
                 src={perk.image}
                 alt={perk.title}
-                className='w-full h-full hover:cursor-pointer'
+                className='w-full h-full hover:cursor-pointer max-w-[700px]'
                 width={700}
                 height={700}
               />
             )}
             {perk.imageButton && (
-              <div className='relative w-full h-full'>
+              <div className='relative w-full h-full max-w-[700px]'>
                 <Image
                   src={perk.imageButton.image}
                   alt={perk.title}
-                  className=' hover:cursor-pointer w-full h-full'
+                  className=' hover:cursor-pointer w-full h-full '
                   width={700}
                   height={700}
                 />

@@ -60,7 +60,7 @@ export default function Footer() {
 
   return (
     <footer className='grid grid-cols-1 col-span-12 p-10 xl:grid-cols-12'>
-      <div className='container grid grid-cols-2 col-span-12 gap-5 mx-auto mb-5 md:grid-cols-4 lg:grid-cols-6 grid-rows-auto md:mb-10 lg:mb-32 xl:col-span-10 xl:col-start-2'>
+      <div className='container max-w-[1440px] grid grid-cols-2 col-span-12 gap-5 mx-auto mb-5 md:grid-cols-4 lg:grid-cols-6 grid-rows-auto md:mb-10 lg:mb-32 xl:col-span-10 xl:col-start-2'>
         <div className='flex flex-col col-span-2 row-start-3 gap-5 lg:row-start-1'>
           <Image src={Logo} alt='logo' />
           <p>
@@ -124,7 +124,6 @@ export default function Footer() {
             >
               <div className='py-1' role='none'>
                 <a
-                 
                   className='block px-4 py-2 text-sm text-gray-700'
                   role='menuitem'
                   id='menu-item-0'
@@ -133,7 +132,6 @@ export default function Footer() {
                   English
                 </a>
                 <a
-                  
                   className='block px-4 py-2 text-sm text-gray-700'
                   role='menuitem'
                   id='menu-item-1'
