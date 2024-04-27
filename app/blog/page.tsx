@@ -10,7 +10,7 @@ import BottmBanner from '../ui/BottmBanner'
 export default function page() {
   return (
     <>
-      <Header bgColor='bg-background-main py-16'>
+      <Header bgColor='bg-background-main py-6 md:py-16'>
         News and insights <br /> <HeaderSub>from our experts</HeaderSub>{' '}
       </Header>
       <Filter filterData={filterData} />

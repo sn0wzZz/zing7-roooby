@@ -35,7 +35,7 @@ export default function Article({
 
       <Container noPadding>
         <Container>
-          <div className='flex flex-col gap-20'>
+          <div className='flex flex-col gap-10 md:gap-20'>
             {article.content.main && (
               <div>
                 <p className='text-2xl font-medium'>
@@ -45,7 +45,7 @@ export default function Article({
             )}
 
             {article.content.main && (
-              <div className='flex flex-col gap-10'>
+              <div className='flex flex-col gap-5 md:gap-10'>
                 <h2>{article.content.main.heading}</h2>
                 {article.content.main.paragraphs.map((paragraph, i) => (
                   <p key={i}>{paragraph}</p>
@@ -73,7 +73,7 @@ export default function Article({
             )}
 
             {article.content.sub && (
-              <div className='flex flex-col gap-10'>
+              <div className='flex flex-col gap-5 md:gap-10'>
                 <h2>{article.content.sub.heading}</h2>
                 <p className='text-lg'>{article.content.sub.pre}</p>
                 <h3>{article.content.sub.subheading}</h3>
