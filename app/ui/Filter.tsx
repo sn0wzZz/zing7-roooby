@@ -16,7 +16,7 @@ export default function Filter({ filterData }: any) {
           <button
             onClick={() => handleFilter(value ? value : label)}
             key={i}
-            className={`py-4 border-b-4  font-medium  text-nowrap hover:border-f-banner-3 ${
+            className={`py-4 border-b-4  font-medium w-max  text-nowrap hover:border-f-banner-3 ${
               filterValue === label ||
               (filterValue === '*' && label === 'All Articles')
                 ? 'filter-active'
