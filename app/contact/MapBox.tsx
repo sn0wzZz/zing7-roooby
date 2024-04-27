@@ -19,7 +19,7 @@ export default function MapBox() {
         text2={'Plovdiv, Bulgaria, bul Vasil Levski 96'}
       />
 
-      <div className='w-full '>
+      <div className='w-full'>
         <Map />
       </div>
 

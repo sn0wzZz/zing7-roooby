@@ -42,13 +42,13 @@ export default function MapComponent() {
   console.log(center)
 
   return (
-    <div style={{ height: '400px' }}>
+    <div  className='h-[250px] md:h-[400px]'>
       {center ? (
         <MapContainer
           center={center}
           zoom={17}
           scrollWheelZoom={false}
-          style={{ height: '100%', zIndex:0 }}
+          style={{ height: '100%', zIndex: 0 }}
         >
           <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
           <Marker position={center} icon={PinIcon}>

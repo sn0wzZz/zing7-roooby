@@ -3,7 +3,7 @@ import Container from './Container'
 
 export default function Header({ children, bgColor }: any) {
   return (
-    <Container bgColor={bgColor}>
+    <Container bgColor={bgColor} noPadding>
       <h1>{children}</h1>
     </Container>
   )

@@ -22,7 +22,7 @@ export default function RootLayout({
         <FilterContextProvider>
           <MainNav />
           {children}
-          <BottmBanner />
+          
           <Footer />
           <Toaster />
         </FilterContextProvider>

@@ -5,6 +5,7 @@ import News from './product/News'
 import Perks from './product/Perks'
 import Results from './product/Results'
 import Reviews from './product/Reviews'
+import BottmBanner from './ui/BottmBanner'
 import Partners from './ui/Partners'
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <News />
       <Results />
       <Reviews />
+      <BottmBanner />
     </div>
   )
 }
