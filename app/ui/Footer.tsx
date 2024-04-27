@@ -89,7 +89,7 @@ export default function Footer() {
         ))}
       </div>
       <div className='flex flex-col-reverse items-center justify-between col-span-12 gap-3 p-2 border-t md:flex-row md: xl:col-span-10 xl:col-start-2 text-p-secondary'>
-        <span>© Cospanyright 2024</span>
+        <span>© Copyright 2024</span>
         <div className='flex gap-3'>
           <a href='#'>Terms of service</a>
           <a href='#'>Privacy Policy</a>
