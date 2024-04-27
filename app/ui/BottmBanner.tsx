@@ -1,6 +1,7 @@
 import React from 'react'
 import { BsChevronRight } from 'react-icons/bs'
 import Container from './Container'
+import { FaChevronRight } from 'react-icons/fa6'
 
 export default function BottmBanner() {
   return (
@@ -28,7 +29,7 @@ export default function BottmBanner() {
               <div className='flex flex-col items-center justify-center gap-5 mx-10 text-center lg:translate-x-16 xl:translate-x-22 2xl:translate-x-20'>
                 <button className='flex items-center p-4 text-base button-secondary sm:text-lg md:text-xl md:p-6 '>
                   Try for Free
-                  <BsChevronRight />
+                  <FaChevronRight />
                 </button>
                 <p className='text-white'>
                   Full access. No credit card required.
