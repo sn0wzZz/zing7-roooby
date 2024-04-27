@@ -62,9 +62,7 @@ export default function Perks() {
                   <p className='mx-2 font-bold text-white md:text-start md:text-lg'>
                     {perk.imageButton.message}
                   </p>
-                  <ButtonMore variant3 noArr>
-                    {perk.imageButton.label}
-                  </ButtonMore>
+                  <ButtonMore variant3 noArr>{perk.imageButton.label}</ButtonMore>
                 </div>
               </div>
             )}
