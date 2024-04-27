@@ -29,6 +29,8 @@ export default function FAQ() {
                   {el.question}
                 </p>
 
+<div>
+
                 <svg
                   className={`w-8 h-8 transition-transform duration-300 ${
                     active === i ? '' : 'transform rotate-45'
@@ -45,11 +47,12 @@ export default function FAQ() {
                   />
                 </svg>
               </div>
+              </div>
               <div
                 className={`overflow-hidden transition-all duration-300  ${
                   active === i ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                 }`}
-              >
+                >
                 <p>{el.answer}</p>
               </div>
             </div>
