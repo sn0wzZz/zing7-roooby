@@ -35,9 +35,9 @@ export default function MainNav() {
         className={`container mx-auto max-w-[1440px]  w-full px-4 py-1 md:py-3 flex justify-between  items-center lg:justify-around col-span-12 `}
       >
         {/* Logo */}
-        <div>
+        <Link href="/">
           <Image src={Logo} alt='logo' />
-        </div>
+        </Link>
 
         <button onClick={handleMenu} className='relative z-40 lg:hidden group'>
           <div className='relative flex overflow-hidden items-center justify-center  w-[52px] h-[52px] transform transition-all  duration-200'>
