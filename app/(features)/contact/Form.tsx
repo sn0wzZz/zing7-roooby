@@ -3,6 +3,7 @@ import { SubmitHandler, useForm } from 'react-hook-form'
 import ButtonMore from '../../ui/ButtonMore'
 import FormInput from '../../ui/FormInput'
 import { isValidEmail } from '../../utils/helpers'
+import toast from 'react-hot-toast'
 
 type Inputs = {
   name: string
@@ -17,7 +18,10 @@ export default function Form() {
     watch,
     formState: { errors },
   } = useForm<Inputs>()
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
+  const onSubmit: SubmitHandler<Inputs> = (data) =>
+    toast.success('Your massage has been received!', {
+      duration: 2000,
+    })
 
   console.log(watch('name')) // watch input value by passing the name of it
 
