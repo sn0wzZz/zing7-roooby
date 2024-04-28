@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import TextDetail from '../ui/TextDetail'
+import TextDetail from '../../ui/TextDetail'
 import dynamic from 'next/dynamic'
 
 export default function MapBox() {

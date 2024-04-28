@@ -5,8 +5,8 @@ import Image from 'next/image'
 
 import { partnersData } from '@/public/data'
 import toast from 'react-hot-toast'
-import { isValidEmail } from '../utils/helpers'
-import Partners from '../ui/Partners'
+import { isValidEmail } from '../../utils/helpers'
+import Partners from '../../ui/Partners'
 
 export default function Hero() {
   const [input, setInput] = useState('')

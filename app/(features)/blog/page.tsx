@@ -1,11 +1,11 @@
 import React from 'react'
 
-import Header, { HeaderSub } from '../ui/Header'
-import Filter from '../ui/Filter'
+import Header, { HeaderSub } from '../../ui/Header'
+import Filter from '../../ui/Filter'
 import { filterData, newsData2 } from '@/public/data'
-import Articles from '../ui/Articles'
-import Container from '../ui/Container'
-import BottmBanner from '../ui/BottmBanner'
+import Articles from '../../ui/Articles'
+import Container from '../../ui/Container'
+import BottmBanner from '../../ui/BottmBanner'
 
 export default function page() {
   return (

@@ -2,10 +2,10 @@ import React from 'react'
 
 import { newsData2 } from '@/public/data'
 
-import Container from '../ui/Container'
-import ButtonMore from '../ui/ButtonMore'
+import Container from '../../ui/Container'
+import ButtonMore from '../../ui/ButtonMore'
 
-import Articles from '../ui/Articles'
+import Articles from '../../ui/Articles'
 
 export default function News() {
   return (

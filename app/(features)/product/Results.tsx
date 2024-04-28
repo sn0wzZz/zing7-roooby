@@ -1,8 +1,8 @@
 import React from 'react'
-import Container from '../ui/Container'
+import Container from '../../ui/Container'
 import { resultsData } from '@/public/data'
-import Avatar from '../ui/Avatar'
-import Statement from '../ui/Statement'
+import Avatar from '../../ui/Avatar'
+import Statement from '../../ui/Statement'
 
 export default function Results() {
   return (

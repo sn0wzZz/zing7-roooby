@@ -1,8 +1,8 @@
 'use client'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import ButtonMore from '../ui/ButtonMore'
-import FormInput from '../ui/FormInput'
-import { isValidEmail } from '../utils/helpers'
+import ButtonMore from '../../ui/ButtonMore'
+import FormInput from '../../ui/FormInput'
+import { isValidEmail } from '../../utils/helpers'
 
 type Inputs = {
   name: string

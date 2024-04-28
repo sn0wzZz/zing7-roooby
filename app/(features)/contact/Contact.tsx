@@ -1,7 +1,6 @@
-import Container from '../ui/Container'
+import Container from '../../ui/Container'
 import Form from './Form'
 import MapBox from './MapBox'
-
 
 export default function Contact() {
   return (

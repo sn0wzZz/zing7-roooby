@@ -1,7 +1,6 @@
-import Header from '../ui/Header';
-import Partners from '../ui/Partners';
-import Contact from './Contact';
-
+import Header from '../../ui/Header'
+import Partners from '../../ui/Partners'
+import Contact from './Contact'
 
 export default function page() {
   return (

@@ -1,9 +1,9 @@
 import React from 'react'
-import Container from '../ui/Container'
-import ButtonMore from '../ui/ButtonMore'
+import Container from '../../ui/Container'
+import ButtonMore from '../../ui/ButtonMore'
 import { reviewsData } from '@/public/data'
-import Avatar from '../ui/Avatar'
-import Statement from '../ui/Statement'
+import Avatar from '../../ui/Avatar'
+import Statement from '../../ui/Statement'
 
 export default function Reviews() {
   return (

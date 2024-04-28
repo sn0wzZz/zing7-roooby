@@ -1,7 +1,7 @@
 import React from 'react'
-import Container from '../ui/Container'
+import Container from '../../ui/Container'
 import { plansData } from '@/public/data'
-import { formatCurrency } from '../utils/helpers'
+import { formatCurrency } from '../../utils/helpers'
 import { FaCheck } from 'react-icons/fa6'
 import Feature from './Feature'
 
