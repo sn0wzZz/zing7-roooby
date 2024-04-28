@@ -35,25 +35,32 @@ export default function MainNav() {
         className={`container mx-auto max-w-[1440px]  w-full px-4 py-1 md:py-3 flex justify-between  items-center lg:justify-around col-span-12 `}
       >
         {/* Logo */}
-        <Link href="/">
+        <Link href='/'>
           <Image src={Logo} alt='logo' />
         </Link>
 
-        <button onClick={handleMenu} className='relative z-40 lg:hidden group'>
-          <div className='relative flex overflow-hidden items-center justify-center  w-[52px] h-[52px] transform transition-all  duration-200'>
-            <div className='flex flex-col justify-between w-[21px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden'>
+        <button
+          onClick={handleMenu}
+          className='relative   z-40 lg:hidden group'
+        >
+          <div className='relative flex overflow-hidden  items-center justify-center  w-[52px] h-[52px] transform transition-all  duration-200'>
+            <div className='flex flex-col justify-between w-[21px] h-[20px] transform transition-all duration-300 origin-center   '>
               <div
-                className={`bg-black h-[2px] w-7 transform transition-all duration-300 rounded-full origin-left ${
+                className={`bg-black h-[2px] ${
+                  menuIsOpen ? 'w-7' : 'w-6'
+                } transform transition-all duration-300 rounded-full origin-left ${
                   menuIsOpen && 'rotate-[42deg]'
                 }`}
               ></div>
               <div
                 className={`bg-black h-[2px] w-1/2 transform transition-all rounded-full duration-300 ${
-                  menuIsOpen && '-translate-x-10'
+                  menuIsOpen && '-translate-x-1 opacity-0'
                 }`}
               ></div>
               <div
-                className={`bg-black h-[2px] w-7 transform transition-all duration-300 rounded-full  origin-left ${
+                className={`bg-black h-[2px]  ${
+                  menuIsOpen ? 'w-7' : 'w-6'
+                } transform transition-all duration-300 rounded-full  origin-left ${
                   menuIsOpen && '-rotate-[42deg]'
                 }`}
               ></div>
