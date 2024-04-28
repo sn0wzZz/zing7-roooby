@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import ArticleThumbnail from './AritcleThumbnail'
-import useWindowDimensions from '@/app/utils/useWindowDimensions'
+import useWindowDimensions from '@/app/hooks/useWindowDimensions'
 import { useFilterContext } from '../contexts/FilterContext'
 
 export default function Articles({ articlesData, latest, latest2, art2 }: any) {

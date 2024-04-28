@@ -33,8 +33,8 @@ export default function Article({
         </div>
       </Container>
 
-      <Container noPadding>
-        <Container>
+      <Container bgColor='py-10 md:px-20' noPadding>
+        
           <div className='flex flex-col gap-10 md:gap-20'>
             {article.content.main && (
               <div>
@@ -76,7 +76,7 @@ export default function Article({
               <div className='flex flex-col gap-5 md:gap-10'>
                 <h2>{article.content.sub.heading}</h2>
                 <p className='text-lg'>{article.content.sub.pre}</p>
-                <h3>{article.content.sub.subheading}</h3>
+                <h4>{article.content.sub.subheading}</h4>
 
                 {article.content.sub.paragraphs.map((paragraph, i) => (
                   <p key={i} className='text-lg'>
@@ -91,7 +91,7 @@ export default function Article({
               <Links full />
             </div>
           </div>
-        </Container>
+        
       </Container>
 
       <Container bgColor='bg-background-main'>
